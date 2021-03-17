@@ -39,3 +39,14 @@ body {
 .margin {
 margin-right: 10px;
 }
+
+
+@media screen and (max-width: 480px) {
+    body {
+        margin: 5px;
+    }
+
+    .style {
+        padding-right: 30px;
+    }
+}

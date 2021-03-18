@@ -57,18 +57,17 @@ header .nav-link {
 .feature-description {
     flex: 5;
 }
-footer , ul {
+
+footer span {
+    margin-top: 5px;
     display: flex;
     justify-content: flex-end;
-    flex-direction: row;
+    font-size: bold;
+    color: var(--mute-color);
+    
 }
-
-footer, span {
-    margin-top: 0px;
-    display:flex;
-    justify-content: flex-end;
-    font-size: 15px;
-    padding: 10px;
+footer ul li {
+    text-decoration: none;
 }
 
 .product {
@@ -124,7 +123,17 @@ ol li {
 .product {
     padding: 5px;
 }
-
+ .footer {
+     display: flex;
+     justify-content: flex-end;
+ }
+  footer .nav-link {
+      text-decoration: none;
+  }
+  footer ul li {
+      padding: 5px;
+  }   
+ 
 
 
 

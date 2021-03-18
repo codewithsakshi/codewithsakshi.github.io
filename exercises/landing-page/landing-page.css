@@ -133,6 +133,13 @@ ol li {
   footer ul li {
       padding: 5px;
   }   
+  footer span {
+      margin-top: 5px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: bold;
+      color: var(--muted-color)
+  }
  
 
 

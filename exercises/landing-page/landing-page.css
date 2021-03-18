@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+     font-family: 'Oswald', sans-serif;
+    --text-color: #2b2e4a;
+    --primary-color: #e84545;
+    --secondary-color: #903749;
+    --muted-color: #53354a;
+    --white: #f0f0f0;
+    color: var(--text-color)
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 300px;
+}
+
+header .nav-link {
+    text-decoration: none;
+}
+
+.nav-links-container {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.features-container {
+    margin-top: 100px;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    padding: 5px 30px;
+    align-items: center;
+}
+
+.feature-icon {
+    color: var(--primary-color);
+    font-size: 64px;
+    display: block;
+    flex: 1;
+}
+
+.feature-description {
+    flex: 5;
+}
+footer , ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+footer, span {
+    margin-top: 0px;
+    display:flex;
+    justify-content: flex-end;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    width: 30%
+    
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 7px 20px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+ .get-started-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.get-started-section input {
+    padding: 5px 20px;
+    width: 300px;
+    margin-top: 20px;
+}
+ 
+ul li {
+    list-style-type: none;
+}
+
+.video-container {
+    text-align: center;
+}
+
+.pricing-container {
+    display: flex;
+    margin: 20px;
+}
+ol li {
+    list-style-type: none;
+}
+.product {
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+

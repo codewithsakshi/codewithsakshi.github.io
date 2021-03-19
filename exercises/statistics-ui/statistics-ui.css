@@ -80,6 +80,8 @@
 .links-container a {
     text-decoration: none;
     margin-top: 20px;
+    color: red;
+    margin-top: 15px;;
 }
 
 .links-container p {

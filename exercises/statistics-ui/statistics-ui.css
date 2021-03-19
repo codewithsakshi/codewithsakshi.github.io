@@ -68,6 +68,7 @@
     padding: auto;
     margin-top: 5px;
     margin-bottom: 10px;
+    border-color: black;
 }
 
 .links-container {
@@ -83,4 +84,8 @@
 
 .links-container p {
     margin-top: 20px;
+}
+
+.class {
+    margin-top: 10px;
 }

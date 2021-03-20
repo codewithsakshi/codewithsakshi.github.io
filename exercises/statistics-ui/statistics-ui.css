@@ -18,6 +18,7 @@
     border: 2px solid;
     margin-top: 30px;
     margin-bottom: 30px;
+    padding: 0 16px;
 }
 
 .search-container {
@@ -47,6 +48,12 @@
     border-radius: 5px;
     padding: 20px;
     flex: 1;
+    position: relative;
+    min-height: 200px;
+}
+
+.box:last-child, .box:last-child {
+    margin-right: 0;
 }
 .box-1 {
     background-color: var(--primary-color);   
@@ -65,11 +72,15 @@
 }
 
 .btn {
-    border-radius: 5px;
-    padding: auto;
+    border-radius: 10px;
+    padding: 10px 20px;
     margin-top: 15px;
     margin-bottom: 10px;
-    border-color: black;
+    border: 1px solid gray;
+    background-color: transparent;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
 }
 
 .links-container {
@@ -92,7 +103,9 @@
     background-color: whitesmoke; 
     border: 1px solid black;
     border-radius: 10px;
-    position: relative;
-    top: 10px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    padding: 10px 20px;
 
 }

@@ -38,6 +38,7 @@
 .box-container {
     margin-top: 30px;
     display: flex;
+    justify-content: space-evenly;
     width: 100%;
 }
 
@@ -66,7 +67,7 @@
 .btn {
     border-radius: 5px;
     padding: auto;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 10px;
     border-color: black;
 }
@@ -79,15 +80,19 @@
 
 .links-container a {
     text-decoration: none;
-    margin-top: 20px;
     color: red;
-    margin-top: 15px;;
+    
 }
 
 .links-container p {
     margin-top: 20px;
 }
 
-.class {
-    margin-top: 10px;
+.links {
+    background-color: whitesmoke; 
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+
 }

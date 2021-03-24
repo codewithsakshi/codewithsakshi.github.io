@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --linear-color: #f7f8fd;
+    --white-color: #ffffff;
+    --radial-color: #61a1fa;
+    --second-color: rgba(173, 130, 215, 0.47);
+    --btn-color: #3457dc;
+    --text-color: #1a1b38;
+    --container-3-color: #f7f9fd;
+}
+
+body {
+    background-image: linear-gradient(179 deg, #f7f8fd 2%, #ffffff 99%);
+    color: var(--text-color);
+    font-size: 12px;
+    font-family: mulish, sans-serif;
+}
+
+.container-1 {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ margin-top: 25px;
+}
+
+
+.list-section {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+}
+
+ul li {
+    list-style-type: none;
+    margin-left: 15px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+button {
+    margin-left: 20px;
+    font-size: 10px;
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--btn-color);
+    color: var(--white-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+       
+    
+}
+ form label {
+    display: block;
+}
+
+.sub-container {
+    display: flex;
+}
+
+.container-2 {
+    padding-top: 40px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    /* margin: auto;
+    margin-top: 80px;
+    margin-left: 160px; */
+    align-items: center;
+}
+
+.container-2-content, .container-3-content{
+    margin-right: 20px;
+    min-width: 300px;
+}
+.container-2-para {
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 10px;    
+    border: 1px solid #ddd;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 13px;
+    line-height: 10px;
+}
+
+label {
+    margin: 10px 0 5px 0;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 10px;
+    margin-top: 15px;
+}
+
+textarea {
+    border-radius: 2px;
+    font-size: 12px;
+    resize: none;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+textarea:focus {
+    outline: 1px solid #f0f0f0;
+}
+
+
+.container-3 {
+   padding-top: 40px;
+   flex: 1;
+   margin-top: 10px;
+   background-color: var(--container-3-color);
+   border-radius: 5px;
+}
+
+.container-3 h2 {
+    margin: auto;
+    margin-left: 60px;
+}
+
+.container-3-part {
+    display: flex;
+    margin-left: 60px; 
+    border: 1px solid none;
+    width: 280px;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    align-items: center;
+}
+
+.container-3-part-1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+.container-3-para {
+   margin-top: 10px;
+}
+
+input:focus {
+   outline: none; 
+}
+
+.slack-img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.circle-img {
+    display: block;
+    height: 60px;
+    width: 100%;
+}

@@ -10,10 +10,15 @@
   <body>
     <header>
       <h1>Our Pricing</h1>
-      <div type="label-elements-container">
-        <label>Annually</label>
-        <input type="checkbox" class="checkbox" />
-        <label>Monthly</label>
+      <div class="toggle">
+        <label>Annually </label>
+        <div class="toggle-btn">
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label class="sub" id="sub" for="checkbox">
+            <div class="circle"></div>
+          </label>
+        </div>
+        <label> Monthly</label>
       </div>
     </header>
     <div class="pricing-cards-container">

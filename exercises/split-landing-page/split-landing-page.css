@@ -15,15 +15,20 @@
 body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     text-align: center;
+    height: 100vh;
 }
 
 .container {
     display: flex;
-    height: 100vh;
     position: relative;
-
+    height: 100%;
+    width: 100%;
 }
 
+
+.split {
+  transition: all 1s ease-in-out;
+}
 
 .split-left {
     background: url(https://images.unsplash.com/photo-1550828486-68812fa3f966?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
@@ -44,9 +49,6 @@ h1 {
     color: whitesmoke;
     margin: auto;
     margin-top: 25%;
-    /* transform: translateX(-50%); */
-    /* white-space: nowrap; */
-    /* position: absolute; */
 }
 
 .btn {
@@ -71,17 +73,11 @@ h1 {
 }
 
 .hover-left .split-left {
-    width: var(--hover-width);
+  flex:2.3;
   }
   
-  .hover-left .split-right {
-    width: var(--other-width);
+  .hover-right .split-right {
+    flex: 2.3;
   }
+
   
-  .hover-right .split-left {
-    width: var(--hover-width);
-  }
-  
-  .hover-right .split-left {
-    width: var(--other-width);
-  }

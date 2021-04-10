@@ -21,7 +21,8 @@
     border: none;
     color: #fff;
     margin: 1rem;
-    padding: 1.5rem 3rem;
+    width: 160px;
+    height: 70px;
     font-size: 1.2rem;
     font-family: inherit;
     cursor: pointer;

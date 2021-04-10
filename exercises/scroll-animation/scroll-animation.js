@@ -2,26 +2,23 @@
  
  window.addEventListener('scroll', checkBoxes)
  checkBoxes()
+
  function checkBoxes() {
-     
+//  console.log("Function checkboxes called")    
+
+ const triggerBottom = window.innerHeight/5*4;
+
+ for(let i =0; i < boxes.length; i++){
+     const boxTop = boxes[i].getBoundingClientRect().top
+    //  console.log(boxTop)
+     if(boxTop < triggerBottom) {
+         boxes[i].classList.add('show')
+     } else {
+         boxes[i].classList.remove('show')
+     }
  }
+}
 
-// const boxes = document.querySelectorAll('.box')
+console.log(boxes)
 
-// window.addEventListener('scroll', checkBoxes)
 
-// checkBoxes()
-
-// function checkBoxes() {
-//     const triggerBottom = window.innerHeight / 5 * 4
-
-//     boxes.forEach(box => {
-//         const boxTop = box.getBoundingClientRect().top
-
-//         if(boxTop < triggerBottom) {
-//             box.classList.add('show')
-//         } else {
-//             box.classList.remove('show')
-//         }
-//     })
-// }

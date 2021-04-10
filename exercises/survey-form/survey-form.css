@@ -5,10 +5,10 @@ body {
     font-weight: bold;
     font-size: 20px;
     border-radius: 5px;
-    background-image: url("https://static1.makeuseofimages.com/wp-content/uploads/2017/02/Photoshop-Replace-Background-Featured.jpg?q=50&fit=contain&w=750&h=375&dpr=1.5");
      background-repeat: y-repeat;
      background-attachment: scroll;
-.type {
+
+ .type {
     text-align: center;
 }
 

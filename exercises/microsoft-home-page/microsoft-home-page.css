@@ -40,7 +40,7 @@ body {
 }
 
 .section-1 ul li {
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid transpa  rent;
 }
 .section-1 ul li:hover {
   border-bottom: 2px solid #262626;
@@ -199,6 +199,7 @@ a {
   background-color: #f2f2f2;
   color: #616161;
   font-weight: 500;
+  
 }
 
 .links-container {

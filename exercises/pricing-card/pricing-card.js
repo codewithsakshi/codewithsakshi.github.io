@@ -17,3 +17,5 @@ checkboxElement.addEventListener('click', function(){
     professionalPlanPriceElement.textContent = professionalPlanText === "$249.99" ? "$24.99": "$249.99"
     masterPlanPriceElement.textContent = masterPlanPriceText === "$399.99" ? "$39.99": "$399.99"
 })
+
+

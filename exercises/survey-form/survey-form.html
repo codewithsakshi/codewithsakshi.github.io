@@ -1,126 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey form</title>
+    <link rel="stylesheet" href="./survey-form.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Survey form </title>
-    <link rel="stylesheet" href="./survey-form.css">
+  <body>
+    <h1>freeCodeCamp Survey Form</h1>
+    <p class="header-text">
+      Thank you for taking the time to help us improve the platform
+    </p>
+    <form action="form-container">
+      <fieldset class="sub-container">
+        <p class="font">Name</p>
+        <label for="" class="label-element">
+          <input
+            type="text"
+            class="text-input"
+            placeholder="Enter your name"
+            required
+          />
+        </label>
 
-</head>
+        <p class="font">Email</p>
+        <label for="" class="margin">
+          <input
+            type="Email"
+            class="text-input label-element"
+            placeholder="Enter your Email"
+            required
+          />
+        </label>
 
-<body>
-    <h1 class="type"> freecodecamp survey form </h1>
-    <p class="type font"> Thank you for taking the time to help us improve the platform </p>
-    <form action="">
-        <fieldset class="style">
+        <p class="font">Age (optional)</p>
+        <input type="number" placeholder="Age" class="text-input" required />
 
-            <p> Name </p>
-            <label for="" class="margin">
-                <input type="text" class="text-input" placeholder="Enter your name" required>
-            </label>
+        <p class="font">Which option best describes your current role?</p>
+        <select name="referrer" class="text-input label-element">
+          <option disabled selected value>Select current role</option>
+          <option value="Student">Student</option>
+          <option value="Full time job">Full time job</option>
+          <option value="Full time learner">Full time learner</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+          <option value="Other">Other</option>
+        </select>
+        <div>
+          <p class="font">Would you recommend free code camp to a friend?</p>
+          <label for="definitely" class="label-element">
+            <input type="radio" name="rating" value="definitely" checked />
+            Definitely
+          </label>
+          <!-- <br> -->
+          <label for="may be" class="label-element">
+            <input type="radio" name="rating" value="may be" checked /> May be
+          </label>
+          <!-- <br> -->
+          <label for="not sure" class="label-element">
+            <input type="radio" name="rating" value="Not sure" checked /> Not
+            sure
+          </label>
+        </div>
 
+        <p class="font">What is your favourite feature of free code camp?</p>
 
-            <p> Email </p>
-            <label for="" class="margin">
-                <input type="Email" class="text-input" placeholder="Enter your Email" required>
-            </label>
+        <select name="" class="text-input">
+          <option disabled select an option>select an option</option>
+          <option value="challenges">challenges</option>
+          <option value=" projects">projects</option>
+          <option value="community">community</option>
+          <option value="open source">open source</option>
+        </select>
 
+        <p class="font">
+          Would you like to see improved? <span> (check all that apply) </span>
+        </p>
+        <div class="checkbox-container">
+          <label for="" class="label-element">
+            <input type="checkbox" checked /> Front-end projects
+          </label>
+          <label for="" class="label-element">
+            <input type="checkbox" checked /> back-end projects
+          </label>
+          <label for="checkbox" class="label-element">
+            <input type="checkbox" checked /> Data visualization
+          </label>
+          <label for="" class="label-element">
+            <input type="checkbox" checked /> challenges
+          </label>
+          <label for="" class="label-element">
+            <input type="checkbox" checked /> Open source community
+          </label>
+          <label for="" class="label-element">
+            <input type="checkbox" checked /> Gitter help rooms
+          </label>
 
-            <p>Age (optional) </p>
-            <input type="number" placeholder="Age" class="text-input" required>
+          <label for="" class="label-element">
+            <input type="checkbox" checked /> Videos
+          </label>
+          <label for="" class="label-element">
+            <input type="checkbox" checked /> City Meetups
+          </label>
+          <label for="" class="label-element">
+            <input type="checkbox" checked /> Wiki
+          </label>
+          <label for="" class="label-element">
+            <input type="checkbox" checked /> Forum
+          </label>
+          <label for="" class="label-element">
+            <input type="checkbox" checked /> Additional courses
+          </label>
+        </div>
 
-            <p> Which option best describes your current role? </p>
-            <select name="referrer" class="text-input">
-                <option disabled selected value> Select current role </option>
-                <option value="Student"> Student </option>
-                <option value="Full time job"> Full time job </option>
-                <option value="Full time learner"> Full time learner </option>
-                <option value="Prefer not to say"> Prefer not to say </option>
-                <option value="Other"> Other </option>
-            </select>
-            <div>
-                <p> Would you recommend free code camp to a friend?</p>
-                <label for="definitely" class="form-option">
-                    <input type="radio" name="rating" value="definitely" checked> Definitely
-                </label>
-                <!-- <br> -->
-                <label for="may be" class="form-option">
-                    <input type="radio" name="rating" value="may be" checked> May be
-                </label>
-                <!-- <br> -->
-                <label for="not sure" class="form-option">
-                    <input type="radio" name="rating" value="Not sure" checked> Not sure
-                </label>
-            </div>
+        <p class="font">Any comment or suggestion?</p>
+        <label for="" class="label-element">
+          <textarea
+            name="comment"
+            class="text-input"
+            cols="30"
+            rows="8"
+            placeholder="Enter your comment here.."
+          ></textarea>
+        </label>
 
-            <p> What is your favourite feature of free code camp? </p>
-
-            <select name="" class="text-input">
-                <option disabled select an option> select an option </option>
-                <option value="challenges"> challenges </option>
-                <option value=" projects"> projects </option>
-                <option value="community"> community </option>
-                <option value="open source"> open source </option>
-
-            </select>
-
-
-            <p> Would you like to see improved? <span> (check all that apply) </span></p>
-            <label class="design">
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> Front-end projects
-                </label>
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> back-end projects
-                </label>
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> Data visualization
-                </label>
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> challenges
-                </label>
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> Open source community
-                </label>
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> Gitter help rooms
-                </label>
-
-
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> Videos
-                </label>
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> City Meetups
-                </label>
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> Wiki
-                </label>
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> Forum
-                </label>
-                <label for="" class="form-option">
-                    <input type="checkbox" checked> Additional courses
-                </label>
-
-            </label>
-
-            <p> Any comment or suggestion? </p>
-            <label for="" class="margin">
-                <textarea name="comment" class="text-input" cols="30" rows="5"> Enter your comment here..</textarea>
-            </label>
-
-            <br>
-            <button type="submit" class="text-input"> submit </button>
-        
-
-        </fieldset>
+        <br />
+        <button type="submit" class="text-input btn">submit</button>
+      </fieldset>
     </form>
-
-
-
-</body>
-
+  </body>
 </html>

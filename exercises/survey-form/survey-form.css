@@ -1,53 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
 body {
-    background-color: brown;
-    margin: 130px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 5px;
-     background-repeat: y-repeat;
-     background-attachment: scroll;
-
- .type {
-    text-align: center;
+  background-color: #27296d;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 5px;
+  background-repeat: y-repeat;
+  background-attachment: scroll;
+  color: #fff;
+  width: 75%;
+  margin: auto;
 }
 
-.style {
-    background-color: lightcoral;
-    padding-right: 60px;
+h1 {
+  font-weight: 410;
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
+  display: block;
+  margin-bottom: 6px;
 }
 
+.header-text {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 320;
+  text-align: center;
+}
 
-
-.box1 {
-    width: 100px;
-    text-align: center;
+.sub-container {
+  background-color: var(--color-darkblue);
+  border-radius: 5px;
+  margin-top: 30px;
+  padding: 20px 40px;
+  border: none;
 }
 
 .text-input {
-    width: 100%;
-    padding: 8px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
 }
 
-.form-option {
-    display: block;
-    margin-bottom: 10px;
+.label-element {
+  display: block;
+  margin-bottom: 15px;
 }
 
-.margin {
-margin-right: 10px;
+.btn {
+  padding: 15px;
+  background-color: var(--color-green);
+  color: #fff;
+  font-size: 20px;
 }
 
+.font {
+  text-align: start;
+  margin: 30px 0 12px 0;
+}
 
 @media screen and (max-width: 480px) {
-    body {
-        margin: 5px;
-    }
+  body {
+    margin: 5px;
+  }
 
-    .style {
-        padding-right: 30px;
-    }
+  .sub-container {
+    padding-right: 30px;
+  }
 }

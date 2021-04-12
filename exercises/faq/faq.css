@@ -87,7 +87,7 @@ h1 {
 .faq.active::before,
 .faq.active::after {
   content: "\f075";
-  /* font-family: "Font Awesome 5 Free"; */
+  font-family: "Font Awesome 5 Free";
   color: #2ecc71;
   font-size: 7rem;
   position: absolute;

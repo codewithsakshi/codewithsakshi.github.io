@@ -7,13 +7,13 @@ body {
 #main {
     background-color: #eee;
     margin-top: 30px;
-    padding: 30px;
-    
+    padding: 30px;    
 }
 
 .subheading {
     text-align: center;
 }
+
 .main-image {
     text-align: center;
     margin-bottom: 30px;
@@ -25,27 +25,24 @@ body {
 .main-image img {
     width: 100%;
 }
+
 .text-center{
     text-align: center;
 }
+
 .styles {
-background-color: thistle;
+    background-color: thistle;
 }
+
 a:hover{
-    color: red
-    
+    color: red;
 }
+
 .text-design {
-    margin-left:100px;
+    margin-left: 100px;
     margin-right: 100px;
 }
+
 .text-design li {
     margin-bottom: 20px;
 }
-
-
-
-
-
-
-

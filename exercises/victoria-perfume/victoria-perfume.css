@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -19,7 +20,7 @@ body {
   width: 95vw;
   background-color: #f1dee1;
   margin: auto;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
   height: 93vh;
 }
 
@@ -66,9 +67,9 @@ body {
 
 h3 {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 30px;
-  letter-spacing: 1px;
+  font-weight: 400;
   color: var(--perfume-color);
   margin-left: 20px;
 }
@@ -147,10 +148,10 @@ ul {
 }
 
 h1 {
-  font-family: "Nunito", Arial, Helvetica, sans-serif;
   margin-top: 5%;
   font-size: 50px;
-  font-weight: 500;
+  color: var(--perfume-color);
+  font-weight: normal;
   letter-spacing: 0.07rem;
 }
 
@@ -181,7 +182,7 @@ h1 {
 
 .rectangle {
   background-color: var(--img-bg-color);
-  width: 360px;
+  width: 380px;
   height: 180px;
   margin-right: -50%;
 }

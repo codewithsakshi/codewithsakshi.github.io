@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="78" viewBox="0 0 78 78">
+    <defs>
+        <filter id="fs9e7g8gia" width="204.5%" height="204.5%" x="-52.3%" y="-52.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25038243 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="tm62slojab" width="187.5%" height="660%" x="-43.8%" y="-200%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.202933785 0"/>
+        </filter>
+        <filter id="0f7qflctdd" width="240%" height="660%" x="-70%" y="-200%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.202933785 0"/>
+        </filter>
+        <filter id="q8cnt4x14f" width="187.5%" height="660%" x="-43.8%" y="-200%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.202933785 0"/>
+        </filter>
+        <rect id="5gr8b3315c" width="16" height="2.5" x="0" y="0" rx="1"/>
+        <rect id="nliauocsze" width="10" height="2.5" x="0" y="7" rx="1"/>
+        <rect id="o78tv1t5ng" width="16" height="2.5" x="0" y="13.5" rx="1"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g fill="#292A2C" filter="url(#fs9e7g8gia)" transform="translate(-1240 -558) translate(-800 145) translate(875 430) translate(1182)">
+                            <rect width="44" height="44" rx="6"/>
+                        </g>
+                        <g>
+                            <g transform="translate(-1240 -558) translate(-800 145) translate(875 430) translate(1182) translate(14 14)">
+                                <use fill="#000" filter="url(#tm62slojab)" xlink:href="#5gr8b3315c"/>
+                                <use fill="#FFF" xlink:href="#5gr8b3315c"/>
+                            </g>
+                            <g transform="translate(-1240 -558) translate(-800 145) translate(875 430) translate(1182) translate(14 14)">
+                                <use fill="#000" filter="url(#0f7qflctdd)" xlink:href="#nliauocsze"/>
+                                <use fill="#FFF" xlink:href="#nliauocsze"/>
+                            </g>
+                            <g transform="translate(-1240 -558) translate(-800 145) translate(875 430) translate(1182) translate(14 14)">
+                                <use fill="#000" filter="url(#q8cnt4x14f)" xlink:href="#o78tv1t5ng"/>
+                                <use fill="#FFF" xlink:href="#o78tv1t5ng"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

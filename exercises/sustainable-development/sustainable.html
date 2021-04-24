@@ -226,7 +226,14 @@
             <label for="email">Email</label>
             <input type="email" value="" required />
             <label for="amount">Amount</label>
-            <input type="number" min="1000" max="" required placeholder="INR" />
+            <div class="currency-input-container">
+              <select name="currencyType" id="">
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+              </select>
+              <input type="re" min="1000" max="" required  />
+            </div>
             <button type="submit" class="donate-btn">Donate</button>
           </form>
         </div>

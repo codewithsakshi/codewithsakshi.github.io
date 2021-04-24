@@ -115,6 +115,10 @@ ul {
   text-transform: uppercase;
 }
 
+a:hover {
+  border-bottom: 1px solid var(--perfume-color);
+}
+
 .oval-btn {
   width: 24px;
   height: 24px;
@@ -176,6 +180,14 @@ h1 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
+.product-btn:focus {
+  outline: none;
+}
+
+.product-btn:hover {
+  cursor: pointer;
+}
+
 .image-container {
   display: flex;
 }
@@ -212,9 +224,25 @@ h1 {
   /* margin-bottom: -40px; */
 }
 
+.footer-btn:hover {
+  cursor: pointer;
+}
+
 .footer-big-btn {
   background-color: var(--btn-color);
   padding: 3.5px 10px;
   border-radius: 50px;
   border: none;
+}
+
+.footer-big-btn:hover {
+  cursor: pointer;
+}
+
+.footer-btn:focus {
+  outline: none;
+}
+
+.footer-big-btn:focus {
+  outline: none;
 }

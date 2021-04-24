@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --white-color: #fff;
+}
+
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  background-image: url(/assets/animal-animal-photography-close-up-38278.jpg);
+  background-size: cover;
+  color: var(--white-color);
+  background-repeat: no-repeat;
+  width: 90%;
+  margin: auto;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+
+.national-geographic {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 0.1;
+}
+
+.national-geographic button {
+  width: 25px;
+  height: 28px;
+  background-color: transparent;
+  border: 3px solid yellow;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  margin-left: 5px;
+  color: var(--white-color);
+}
+
+.nav-links-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 0.4;
+  font-size: 11px;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  flex: 1.5;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.nav-links li a:hover {
+  color: yellow;
+  border-bottom: 1px solid yellow;
+}
+
+.search-icon {
+  font-size: 15px;
+}
+
+/* image section */
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.wildlife-safari {
+  flex: 0.7;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* width: 300px; */
+  margin-bottom: 20px;
+}
+
+.date {
+  font-size: 8px;
+  color: yellow;
+  line-height: 20px;
+}
+
+.line {
+  font-size: 35px;
+  font-weight: 100;
+  margin: 0 15px;
+  color: var(--white-color);
+}
+
+.text {
+  flex: 0.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  font-size: 8px;
+  /* margin-left: -20px; */
+}
+
+.we-invest {
+  width: 300px;
+}
+
+.img-section {
+  display: flex;
+  flex: 0.3;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.right-images {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 0.6;
+  /* transform: translate(-50px -50px); */
+  flex-direction: column;
+  margin-left: 23px;
+}
+
+.elephant-container {
+  border-radius: 8px;
+  height: 140px;
+  transform: translateY(40px);
+  background-color: rgba(100, 100, 100, 0.8);
+}
+
+.elephant {
+  height: 170px;
+  border-radius: 8px;
+  transform: translate(13px, -13px);
+}
+
+.top-img {
+  width: 100px;
+  height: 130px;
+  border-radius: 8px;
+  margin-top: 60px;
+  transform: translateY(40px);
+}
+
+.bottom-img {
+  width: 100px;
+  border-radius: 8px;
+  margin-top: 10px;
+  transform: translateY(40px);
+}

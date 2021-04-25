@@ -6,6 +6,7 @@
   padding: 0;
   margin: 0;
   --white-color: #fff;
+  --yellow-color: yellow;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
   background-image: url(/assets/animal-animal-photography-close-up-38278.jpg);
   background-size: cover;
   color: var(--white-color);
+  object-fit: contain;
   background-repeat: no-repeat;
   width: 90%;
   margin: auto;
@@ -27,7 +29,7 @@ body {
 .header-section {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 97%;
   margin: auto;
   padding: 20px;
 }
@@ -43,7 +45,7 @@ body {
   width: 25px;
   height: 28px;
   background-color: transparent;
-  border: 3px solid yellow;
+  border: 3px solid var(--yellow-color);
 }
 
 h3 {
@@ -58,7 +60,7 @@ h3 {
   display: flex;
   justify-content: space-evenly;
   flex: 0.4;
-  font-size: 11px;
+  font-size: 10px;
   align-items: center;
 }
 
@@ -76,12 +78,94 @@ h3 {
 }
 
 .nav-links li a:hover {
-  color: yellow;
-  border-bottom: 1px solid yellow;
+  color: var(--yellow-color);
+  border-bottom: 1px solid var(--yellow-color);
 }
 
 .search-icon {
-  font-size: 15px;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.wild-show-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.wild-show-img {
+  width: 300px;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wild-show p {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-left: 14%;
+  letter-spacing: 4.5px;
+  line-height: 20px;
+}
+
+.play-circle {
+  display: flex;
+  margin-left: 35%;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 20px; */
+}
+
+.play-icon {
+  background-color: rgba(160, 160, 160, 0.9);
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-size: 8px;
+  border-radius: 50px;
+  padding-top: 7px;
+  padding-left: 2px;
+  margin-top: 1.5px;
+  margin-left: 1.5px;
+}
+
+.play-icon-container {
+  width: 30px;
+  height: 30px;
+  margin-top: 1.5px;
+  margin-left: 1.5px;
+  border-radius: 50px;
+  border: 1px solid rgba(160, 160, 160, 0.3);
+}
+
+.play-icon-main-container {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  border: 1px solid rgba(160, 160, 160, 0.3);
+}
+
+.watch-trailer {
+  font-size: 9px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: var(--yellow-color);
+  text-transform: uppercase;
+}
+
+.share-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 40px;
+  font-size: 8px;
+  margin-right: 20px;
+}
+
+.share-links i {
+  padding: 8px;
 }
 
 /* image section */
@@ -90,6 +174,7 @@ h3 {
   align-items: flex-end;
   justify-content: flex-start;
   margin-left: 20px;
+  margin-top: -8%;
 }
 
 .wildlife-safari {
@@ -104,7 +189,7 @@ h3 {
 
 .date {
   font-size: 8px;
-  color: yellow;
+  color: var(--yellow-color);
   line-height: 20px;
 }
 
@@ -153,10 +238,18 @@ h3 {
   background-color: rgba(100, 100, 100, 0.8);
 }
 
-.elephant {
+.elephant-container {
+  background-image: url(/assets/geographic-4);
+  background-size: cover;
   height: 170px;
+  width: 110px;
+  text-align: center;
   border-radius: 8px;
-  transform: translate(13px, -13px);
+  transform: translate(13px, 50px);
+}
+
+.elephant-container .play-icon {
+  margin-top: 70%;
 }
 
 .top-img {

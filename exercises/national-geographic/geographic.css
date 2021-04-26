@@ -272,11 +272,12 @@ h3 {
     height: 100vh;
     width: 100vw;
   }
-
-  /* .container {
+  .container {
     width: 95vw;
     height: 100vh;
   }
+
+  /* 
 
   .header-section P {
     width: 97%;

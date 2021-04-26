@@ -18,11 +18,12 @@ body {
 
 .container {
   background-image: url(/assets/animal-animal-photography-close-up-38278.jpg);
-  background-size: cover;
+  background-size: contain;
   color: var(--white-color);
-  object-fit: contain;
-  background-repeat: no-repeat;
-  width: 90%;
+  /* object-fit: none; */
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  width: 85%;
   margin: auto;
 }
 
@@ -246,10 +247,9 @@ h3 {
   text-align: center;
   border-radius: 8px;
   transform: translate(13px, 50px);
-}
-
-.elephant-container .play-icon {
-  margin-top: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .top-img {
@@ -265,4 +265,28 @@ h3 {
   border-radius: 8px;
   margin-top: 10px;
   transform: translateY(40px);
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* .container {
+    width: 95vw;
+    height: 100vh;
+  }
+
+  .header-section P {
+    width: 97%;
+  }
+
+  .wild-show-container {
+    width: 100%;
+  }
+
+  .footer {
+    width: 100%;
+  } */
 }

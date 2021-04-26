@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,300;1,400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -40,7 +40,7 @@ body {
 }
 
 .section-1 ul li {
-  border-bottom: 2px solid transpa  rent;
+  border-bottom: 2px solid transparent;
 }
 .section-1 ul li:hover {
   border-bottom: 2px solid #262626;
@@ -61,65 +61,63 @@ a {
 }
 
 .header-icons-container {
-  width: 70px; 
-    display: flex;
-    justify-content: space-between;
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .section-2 {
-    background-image: url('https://i.ibb.co/zGSDGCL/slide1.png');
-    background-size: cover;
-    background-position: center;
-    height: 400px;  
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 18px;
-    text-align: center;
+  background-image: url("https://i.ibb.co/zGSDGCL/slide1.png");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+  text-align: center;
 }
 
-.section-2 h2  {
+.section-2 h2 {
   margin-bottom: 10px;
   font-size: 25px;
   font-weight: bold;
-} 
+}
 
 .section-2-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 50%;
-    margin: auto;
-    height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  height: 70%;
 }
 
 .btn {
-    background-color: #262626;
-    width: 140px;
-    padding: 10px 0;
-    color: #fff;
-    font-weight: bold;
-    font-size: 15px;
-    display: inline-block;
-    cursor: pointer;
-    margin-top: 20px;
-    text-align: center;
+  background-color: #262626;
+  width: 140px;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
 }
-
-
 
 .btn:hover {
   opacity: 0.9;
 }
 
 .home-cards-container {
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 17px;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
 }
 
 .home-card {
@@ -129,59 +127,58 @@ a {
 
 .home-card img {
   width: 100%;
-} 
-
+}
 
 .home-card a {
   display: block;
   color: #0067b8;
   padding-top: 20px;
   font-weight: bold;
-  font-size: 17px; 
+  font-size: 17px;
 }
 
-.home-card h3  {
-    font-weight: bold;
+.home-card h3 {
+  font-weight: bold;
 }
 .X-box-game {
-    background-image: url('https://i.ibb.co/tBJGPD9/xbox.png');
-    background-size: cover;
-    height: 350px;
-    margin: 30px 0 0 0;
-    width: 100%
+  background-image: url("https://i.ibb.co/tBJGPD9/xbox.png");
+  background-size: cover;
+  height: 350px;
+  margin: 30px 0 0 0;
+  width: 100%;
 }
 
 .X-box-game h2 {
-    font-size: 22px;
-    font-weight: bold;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .X-box-content {
-    width: 40%;
-    font-size: 16px;
-    padding: 50px 0 0 30px;
+  width: 40%;
+  font-size: 16px;
+  padding: 50px 0 0 30px;
 }
 
 .carbon-section {
-    background-image: url('https://i.ibb.co/72cgtsz/carbon.jpg');
-    background-size: cover;
-    height: 350px;
-    color: white;
-    display: flex;
-    align-items: center;
+  background-image: url("https://i.ibb.co/72cgtsz/carbon.jpg");
+  background-size: cover;
+  height: 350px;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .carbon-section-content {
-    width: 50%;
-    font-size: 16px;
-    padding: 0px 0 0 30px;
-    /* margin-top: 30px; */
+  width: 50%;
+  font-size: 16px;
+  padding: 0px 0 0 30px;
+  /* margin-top: 30px; */
 }
 
 .carbon-btn {
-   background-color: white;
-    color: #262626;
-  }
+  background-color: white;
+  color: #262626;
+}
 
 .social-media-section {
   display: flex;
@@ -199,7 +196,6 @@ a {
   background-color: #f2f2f2;
   color: #616161;
   font-weight: 500;
-  
 }
 
 .links-container {
@@ -221,11 +217,10 @@ a {
   font-size: 13px;
 }
 
-
 .footer-links {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
 }
 
 .footer-links li {

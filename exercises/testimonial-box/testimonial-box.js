@@ -60,19 +60,29 @@ const testimonials = [
 
 let idx = 1;
 
-function updateTestimonial() {
-  const { name, position, photo, text } = testimonials[idx];
+async function updateTestimonial() {
+  // const { name, position, photo, text } = testimonials[idx];
+
+  const posts = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const jsonPosts = await posts.json();
+  console.log(posts);
+  const name = testimonials[idx].name;
+  const position = testimonials[idx].position;
+  const photo = testimonials[idx].photo;
+  const text = testimonials[idx].text;
 
   testimonial.innerHTML = text;
   userImage.src = photo;
   username.innerHTML = name;
   role.innerHTML = position;
 
-  idx++;
+  idx = idx + 1;
 
   if (idx > testimonials.length - 1) {
     idx = 0;
   }
 }
 
-setInterval(updateTestimonial, 10000);
+let x = updateTestimonial;
+// console.log(x);
+// setInterval(x, 1000);

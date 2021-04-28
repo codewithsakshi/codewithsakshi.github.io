@@ -1,48 +1,67 @@
 body {
-    /* background-color: darkorchid; */
-    color: #333;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* background-color: darkorchid; */
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
 }
 
 #main {
-    background-color: #eee;
-    margin-top: 30px;
-    padding: 30px;    
+  background-color: #eee;
+  margin-top: 30px;
+  padding: 30px;
 }
 
 .subheading {
-    text-align: center;
+  text-align: center;
 }
 
 .main-image {
-    text-align: center;
-    margin-bottom: 30px;
-    background-color: white;
-    padding: 5px;
-    width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 5px;
+  width: 100%;
 }
 
 .main-image img {
+  width: 100%;
+}
+
+.Norman-time-line {
+  text-align: center;
+}
+
+.wikipedia-links {
+  background-color: thistle;
+  text-align: center;
+}
+
+a:hover {
+  color: red;
+}
+
+.time-line-lists li {
+  padding: 10px;
+  color: #333;
+}
+
+.Norman-timeline-container {
+  width: 60%;
+  margin: auto;
+}
+
+@media screen and (min-width: 300px), (max-width: 2048px) {
+  .Norman-timeline-container {
+    width: 98%;
+    margin: auto;
+  }
+
+  .Norman-time-line {
     width: 100%;
-}
-
-.text-center{
-    text-align: center;
-}
-
-.styles {
-    background-color: thistle;
-}
-
-a:hover{
-    color: red;
-}
-
-.text-design {
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.text-design li {
-    margin-bottom: 20px;
+    font-size: 10px;
+  }
+  .wikipedia-links {
+    font-size: 12px;
+  }
 }

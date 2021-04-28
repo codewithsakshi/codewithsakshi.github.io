@@ -17,19 +17,17 @@ body {
 }
 
 .bg {
-  /* background-image: url(./IMG-20190530-WA0045.jpg); */
   background-image: url(https://images.unsplash.com/photo-1619314367068-f1ba7b7ebfaf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: absolute;
-  top: -30px;
-  left: -30px;
   width: 100vw;
   height: 100vh;
 }
-
 .loading-text {
   font-size: 50px;
-  color: #fff;
+  color: #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }

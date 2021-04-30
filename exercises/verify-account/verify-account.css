@@ -15,6 +15,7 @@ body {
   font-family: "Mulish", Arial, Helvetica, sans-serif;
   background-color: var(--background-color);
   height: 100vh;
+  overflow: hidden;
 }
 
 .container {

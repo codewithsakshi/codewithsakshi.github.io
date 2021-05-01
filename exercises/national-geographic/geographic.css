@@ -267,27 +267,31 @@ h3 {
   transform: translateY(40px);
 }
 
+button:focus {
+  outline: none;
+}
+
 @media screen and (max-width: 420px) {
   body {
     height: 100vh;
     width: 100vw;
   }
-  .container {
+  /* .container {
     width: 95vw;
-    height: 100vh;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
-  /* 
-
-  .header-section P {
-    width: 97%;
+  .wild-show-img {
+    margin-left: 10px;
   }
 
-  .wild-show-container {
-    width: 100%;
+  .wild-show p {
+    margin-left: 10px;
   }
 
-  .footer {
-    width: 100%;
-  } */
-}
+  .play-circle {
+    margin-left: 5px;
+  }
+} */

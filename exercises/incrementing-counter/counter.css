@@ -35,4 +35,5 @@ body {
 .counter {
   font-size: 60px;
   margin-top: 10px;
+  transition: all 0.3s ease-in-out;
 }

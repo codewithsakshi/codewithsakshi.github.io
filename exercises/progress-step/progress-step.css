@@ -41,22 +41,22 @@ body {
   height: 4px;
   width: 100%;
   z-index: -1;
+  /* transform: translateY(-50%); */
 }
 
 .progress {
-  /* background-color: var(--line-border-fill); */
+  background-color: var(--line-border-fill);
   position: absolute;
-  /* transform: translateY(-50%); */
-  /* transition: 0.4s ease; */
-  /* top: 50%; */
-  /* height: 4px; */
-  /* z-index: 1; */
+  transition: 0.4s ease;
+  height: 4px;
+  z-index: -1;
 }
 
 .circle {
   border-radius: 50%;
   background-color: var(--white-color);
-  border: 3px solid var(--line-border-fill);
+  color: #999;
+  border: 3px solid var(--line-border-empty);
   width: 30px;
   text-align: center;
   display: flex;

@@ -1,26 +1,24 @@
-const button = document.getElementById("button");
-const toasts = document.getElementById("toasts");
+const button = document.querySelector(".btn");
 
-const messages = [
-  "Message One",
-  "Message Two",
-  "Message Three",
-  "Message Four",
-];
+const toasts = document.querySelector("#toasts");
+
+const messages = ["Hey Guys", "Hello World", "Hola!", "Okie Dokie"];
 
 const types = ["info", "success", "error"];
 
-button.addEventListener("click", () => createNotification());
+button.addEventListener("click", function () {
+  createNotification();
+});
 
-function createNotification(message = null, type = null) {
+function createNotification() {
   const notif = document.createElement("div");
   notif.classList.add("toast");
-  notif.classList.add(type ? type : getRandomType());
-
-  notif.innerText = message ? message : getRandomMessage();
+  const type = getRandomType();
+  const message = getRandomMessage();
+  notif.classList.add(type);
+  notif.innerText = message;
 
   toasts.appendChild(notif);
-
   setTimeout(() => {
     notif.remove();
   }, 3000);

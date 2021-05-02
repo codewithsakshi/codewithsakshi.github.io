@@ -1,75 +1,69 @@
 * {
-    box-sizing: border-box;
-    padding: o;
-    margin: o;
-    --black-color: #000;
-    --color-charcoal: #333333;
-    --color-slate: #727272;
-    --color-white: #fff;
-    --orange-color: orange;
+  box-sizing: border-box;
+  padding: o;
+  margin: o;
+  --black-color: #000;
+  --color-charcoal: #333333;
+  --color-slate: #727272;
+  --color-white: #fff;
+  --orange-color: orange;
 }
 
-
 .wrapper {
-    background-color: var(--black-color);
-    color: var(--color-white);
-    width: 65vh;
-    height: 90vh;   
-    border-radius: 15px;
-    margin-left: 50px;
-    font-size: 40px;    
+  background-color: var(--black-color);
+  color: var(--color-white);
+  width: 65vh;
+  height: 95vh;
+  border-radius: 15px;
+  margin-left: 50px;
+  font-size: 40px;
 }
 
 .screen {
-    text-align: right;
-    padding: 20px 5px;
-    font-size: 40px;
+  text-align: right;
+  padding: 20px 5px;
+  font-size: 40px;
 }
 
-
 .calc-buttons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .calc-button-row {
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
-
 button {
-    background-color: var(--color-charcoal);
-    color: var(--color-white);
-    /* padding: 13px 18px; */
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  /* padding: 13px 18px; */
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: indigo;
+  background-color: indigo;
 }
 button:focus {
-outline: none;
+  outline: none;
 }
 
 .calc-button {
-    background-color: var(--orange-color);
+  background-color: var(--orange-color);
 }
 
 .zero-btn {
-    width: 112px;
-    /* padding: 13px 44px; */
+  width: 112px;
+  /* padding: 13px 44px; */
 }
-
-
-

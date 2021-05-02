@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+    background-color: magenta;
+}
+body {
+    background-color: lightsalmon;
+    font-family: Oswald, sans-serif;
+}
+
+
+.todo-list {
+width: 60%;
+margin: auto;
+height: 100vh;
+background-color: lime;
+}
+
+.todo-list li:hover {
+    font-weight: bold;
+}
+
+.todo-list li:nth-child(2n+1) {
+    color: maroon;
+}
+
+.todo-list li:last-child {
+    color: gray;
+}

@@ -1,0 +1,46 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700,600");
+@import url("http://fonts.googleapis.com/css?family=Oswald:400,700");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --white: #fff;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
+}
+
+.b-school {
+    flex: 1;
+}
+
+.nav-links-container {
+    flex: 3;
+}
+
+header ul {
+   display: flex;
+   justify-content: space-evenly;
+   width: 80%;
+   margin: auto;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+header ul li a {
+    text-decoration: none;
+}

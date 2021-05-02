@@ -1,0 +1,72 @@
+body {
+  text-align: center;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 300px;
+  margin: 20px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  /*  opacity: .8;*/
+  color: antiquewhite;
+}
+.box-layout {
+  display: inline-block;
+}
+.box-transition {
+  transition: all 0.5s ease-in-out;
+}
+.boxTranslate {
+  background-color: #1b5e20;
+}
+.boxRotate {
+  background-color: #b71c1c;
+  display: inline-block;
+}
+.scale {
+  background-color: #827717;
+}
+.boxSkewX {
+  background-color: #009688;
+}
+.boxSkewY {
+  background-color: #bf360c;
+}
+.boxSkew1 {
+  background-color: #37474f;
+}
+.boxSkew2 {
+  background-color: #0091ea;
+}
+
+.boxTranslate:hover {
+  transform: translate(300px, 300px);
+}
+.boxRotate:hover {
+  transform: rotate(360deg);
+}
+
+.scale:hover {
+  transform: scale(2, 1);
+}
+.boxSkewX:hover {
+  transform: skewX(-20deg);
+}
+
+.boxSkewY:hover {
+  transform: skewY(20deg);
+}
+.boxSkew1:hover {
+  transform: skew(60deg, 70deg);
+}
+
+.boxSkew2:hover {
+  transform: skew(-350deg);
+}

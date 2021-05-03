@@ -73,7 +73,7 @@ h4 {
 }
 
 .nums {
-  color: var(--primary-color);
+  color: #3498db;
   font-size: 50px;
   position: relative;
   overflow: hidden;
@@ -95,7 +95,7 @@ h4 {
 }
 
 .nums span.out {
-  animation: goOut 0.5 ease-in-out;
+  animation: goOut 0.5s ease-in-out;
 }
 
 @keyframes goIn {

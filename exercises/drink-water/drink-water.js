@@ -1,31 +1,31 @@
-const smallCups = document.querySelectorAll(".cup-small");
-const liters = document.querySelector(".liters");
-const percentage = document.querySelector(".percentage");
-const remained = document.querySelector(".remained");
+const smallCupsElements = document.querySelectorAll(".cup-small");
+const litersElement = document.querySelector(".liters");
+const percentageFilledElement = document.querySelector(".percentage");
+const remainedElement = document.querySelector(".remained");
 
 updateBigCup();
 
-smallCups.forEach(function (cup, idx) {
-  cup.addEventListener("click", function () {
-    highlightCups(idx);
+smallCupsElements.forEach(function (smallCup, index) {
+  smallCup.addEventListener("click", function () {
+    highlightCups(index);
   });
 });
 
 function highlightCups(index) {
-  if (index === 7 && smallCups[index].classList.contains("full")) {
-    index = index - 1;
-  } else if (
-    smallCups[index].classList.contains("full") &&
-    !smallCups[index].nextElementSibling.classList.contains("full")
-  ) {
-    index = index - 1;
-  }
+  // if (index === 7 && smallCups[index].classList.contains("full")) {
+  //   index = index - 1;
+  // } else if (
+  //   smallCups[index].classList.contains("full") &&
+  //   !smallCups[index].nextElementSibling.classList.contains("full")
+  // ) {
+  //   index = index - 1;
+  // }
 
-  smallCups.forEach(function (cup, index2) {
+  smallCupsElements.forEach(function (smallCup, index2) {
     if (index2 <= index) {
-      cup.classList.add("full");
+      smallCup.classList.add("full");
     } else {
-      cup.classList.remove("full");
+      smallCup.classList.remove("full");
     }
   });
 
@@ -33,70 +33,28 @@ function highlightCups(index) {
 }
 
 function updateBigCup() {
-  const fullCups = document.querySelectorAll(".cup-small.full").length;
-  const totalCups = smallCups.length;
+  const smallFilledCupsElements = document.querySelectorAll(".cup-small.full");
+  const totalsmallFilledCups = smallFilledCupsElements.length;
+  const totalSmallCups = smallCupsElements.length;
 
-  if (fullCups === 0) {
-    percentage.style.visibility = "hidden";
-    percentage.style.height = 0;
+  if (totalsmallFilledCups === 0) {
+    percentageFilledElement.style.visibility = "hidden";
+    percentageFilledElement.style.height = 0;
   } else {
-    percentage.style.visibility = "visible";
-    percentage.style.height = `${(fullCups / totalCups) * 330}px`;
-    percentage.innerText = `${(fullCups / totalCups) * 100}%`;
+    percentageFilledElement.style.visibility = "visible";
+    percentageFilledElement.style.height = `${
+      (totalsmallFilledCups / totalSmallCups) * 330
+    }px`;
+    percentageFilledElement.innerText = `${
+      (totalsmallFilledCups / totalSmallCups) * 100
+    }%`;
   }
 
-  if (fullCups === totalCups) {
-    remained.style.visibility = "hidden";
-    remained.style.height = 0;
+  if (totalsmallFilledCups === totalSmallCups) {
+    remainedElement.style.visibility = "hidden";
+    remainedElement.style.height = 0;
   } else {
-    remained.style.visibility = "visible";
-    liters.innerText = `${2 - (250 * fullCups) / 1000}L`;
+    remainedElement.style.visibility = "visible";
+    litersElement.innerText = `${2 - (250 * totalsmallFilledCups) / 1000}L`;
   }
 }
-
-// smallCups.forEach((cup, idx) => {
-//   cup.addEventListener("click", () => highlightCups(idx));
-// });
-
-// function highlightCups(idx) {
-//   if (idx === 7 && smallCups[idx].classList.contains("full")) {
-//     idx--;
-//   } else if (
-//     smallCups[idx].classList.contains("full") &&
-//     !smallCups[idx].nextElementSibling.classList.contains("full")
-//   ) {
-//     idx--;
-//   }
-
-// smallCups.forEach((cup, idx2) => {
-//   if (idx2 <= idx) {
-//     cup.classList.add("full");
-//   } else {
-//     cup.classList.remove("full");
-//   }
-// });
-
-//   updateBigCup();
-// }
-
-// function updateBigCup() {
-//   const fullCups = document.querySelectorAll(".cup-small.full").length;
-//   const totalCups = smallCups.length;
-
-//   if (fullCups === 0) {
-//     percentage.style.visibility = "hidden";
-//     percentage.style.height = 0;
-//   } else {
-//     percentage.style.visibility = "visible";
-//     percentage.style.height = `${(fullCups / totalCups) * 330}px`;
-//     percentage.innerText = `${(fullCups / totalCups) * 100}%`;
-//   }
-
-//   if (fullCups === totalCups) {
-//     remained.style.visibility = "hidden";
-//     remained.style.height = 0;
-//   } else {
-//     remained.style.visibility = "visible";
-//     liters.innerText = `${2 - (250 * fullCups) / 1000}L`;
-//   }
-// }

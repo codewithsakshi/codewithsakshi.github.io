@@ -1,21 +1,26 @@
-// const textEl = document.getElementById("text");
-// const speedEl = document.getElementById("speed");
-// const text = "We Love Programming!";
-// let idx = 1;
-// let speed = 300 / speedEl.value;
+const textEl = document.getElementById("text");
+const speedEl = document.getElementById("speed");
 
-// writeText();
+const text = "We Love Programming!";
 
-// function writeText() {
-//   textEl.innerText = text.slice(0, idx);
+let speedValue = 300 / speedEl.value;
 
-//   idx++;
+let idx = 1;
 
-//   if (idx > text.length) {
-//     idx = 1;
-//   }
+writeText();
 
-//   setTimeout(writeText, speed);
-// }
+function writeText() {
+  textEl.innerText = text.slice(0, idx);
 
-// speedEl.addEventListener("input", (e) => (speed = 300 / e.target.value));
+  idx++;
+  if (idx > text.length) {
+    idx = 1;
+  }
+  setTimeout(writeText, speedValue);
+}
+
+speedEl.addEventListener("input", function (event) {
+  const typedValue = event.target.value;
+  speedValue = 900 / typedValue;
+  console.log(speedValue);
+});

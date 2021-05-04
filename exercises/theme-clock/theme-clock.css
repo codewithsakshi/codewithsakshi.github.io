@@ -12,10 +12,10 @@ html {
   transition: all 0.5s ease-in;
 }
 
-html.dark {
+/* html.dark {
   background-color: #111;
   color: var(--primary-color);
-}
+} */
 
 body {
   font-family: "Heebo", sans-serif;
@@ -40,12 +40,12 @@ body {
   outline: none;
 }
 
-.clock-container {
+/* .clock-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 .clock {
   position: relative;
@@ -61,20 +61,20 @@ body {
   height: 65px;
   width: 3px;
   transform-origin: bottom center;
-  transition: all 0.5s ease-in;
+  /* transition: all 0.5s ease-in; */
 }
 
-.needle.hour {
+/* .needle.hour {
   transform: translate(-50%, -100%) rotate(0deg);
-}
+} */
 
 .needle.minute {
-  transform: translate(-50%, -100%) rotate(0deg);
+  /* transform: translate(-50%, -100%) rotate(0deg); */
   height: 100px;
 }
 
 .needle.second {
-  transform: translate(-50%, -100%) rotate(0deg);
+  /* transform: translate(-50%, -100%) rotate(0deg); */
   height: 100px;
   background-color: #e74c3c;
 }
@@ -103,13 +103,13 @@ body {
 }
 
 .time {
-  font-size: 60px;
+  font-size: 3.5em;
   font-weight: 400;
 }
 
 .date {
   color: #aaa;
-  font-size: 14px;
+  font-size: 0.8rem;
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
@@ -129,7 +129,7 @@ body {
 
 small {
   position: absolute;
-  top: 90%;
+  bottom: 10%;
   font-style: italic;
   left: 5%;
   font-size: 15px;

@@ -41,15 +41,20 @@ body {
   justify-content: initial; */
 }
 
+#tags {
+  text-align: left;
+}
+
 .tag {
   background-color: var(--tag-color);
-  border: 50px;
+  border-radius: 50px;
   padding: 10px 20px;
-  margin: 0 5px 10px 0;
+  margin: 10px 5px 10px 0;
   font-size: 14px;
   display: inline-block;
 }
 
 .tag.highlight {
   background-color: var(--tag-highlight-color);
+  transition: all 2s;
 }

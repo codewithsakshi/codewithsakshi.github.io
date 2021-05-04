@@ -12,9 +12,13 @@ listItems.forEach((item, idx) => {
 });
 
 function hideAllContents() {
-  contents.forEach((content) => content.classList.remove("show"));
+  contents.forEach(function (content) {
+    content.classList.remove("show");
+  });
 }
 
 function hideAllItems() {
-  listItems.forEach((item) => item.classList.remove("active"));
+  listItems.forEach(function (item) {
+    item.classList.remove("active");
+  });
 }

@@ -83,7 +83,7 @@ nav ul li.active {
   color: var(--active-color);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .phone {
     height: 600px;
   }

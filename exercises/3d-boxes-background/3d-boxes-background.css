@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --body-bg-color: #fafafa;
+  --magic-btn-color: #f9ca24;
+  --white-color: #fff;
+}
+
+body {
+  font-family: "Roboto", "Poppins", sans-serif;
+  background-color: var(--body-bg-color);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.magic {
+  background-color: var(--magic-btn-color);
+  color: var(--white-color);
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 3px;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  box-shadow: 0 3px rgba(249, 202, 36, 0.5);
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.magic:focus {
+  outline: none;
+}
+
+.magic:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 600px;
+  width: 600px;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.big {
+  width: 600px;
+  height: 600px;
+}
+
+.box-container.big .box {
+  transform: rotateZ(360deg);
+}
+
+.box {
+  background-image: url("https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  position: relative;
+  height: 125px;
+  width: 125px;
+  transition: 0.4s ease;
+}
+
+.box::after {
+  content: "";
+  background-color: var(--magic-btn-color);
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  transform: skewY(45deg);
+  opacity: 0.5;
+}
+
+.box::before {
+  content: "";
+  background-color: var(--magic-btn-color);
+  position: absolute;
+  bottom: -15px;
+  left: 8px;
+  height: 15px;
+  transform: skewX(45deg);
+}

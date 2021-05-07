@@ -138,10 +138,6 @@ p {
     font-size: 1rem;
   }
 
-  .hero {
-    height: 65vh;
-  }
-
   .hero h1 {
     font-size: 1.5rem;
     letter-spacing: -1px;
@@ -154,11 +150,6 @@ p {
   .hero h1,
   p {
     padding: 5px;
-  }
-
-  .content {
-    overflow: auto;
-    height: 145vh;
   }
 
   .content h2 {

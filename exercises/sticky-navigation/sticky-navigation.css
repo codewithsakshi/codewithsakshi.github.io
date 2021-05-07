@@ -47,11 +47,6 @@ ul {
   letter-spacing: -1px;
 }
 
-.ul.active {
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
 a {
   text-decoration: none;
   color: var(--white-color);
@@ -126,4 +121,53 @@ p {
   font-size: 1rem;
   letter-spacing: 1.5px;
   color: var(--content-para-color);
+}
+
+@media screen and (max-width: 500px) {
+  .header-section {
+    font-size: 10px;
+    padding: 15px 10px;
+  }
+
+  ul {
+    flex: 1.7;
+    font-size: 9px;
+  }
+
+  .header-section h1 {
+    font-size: 1rem;
+  }
+
+  .hero {
+    height: 65vh;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .hero h1,
+  p {
+    padding: 5px;
+  }
+
+  .content {
+    overflow: auto;
+    height: 145vh;
+  }
+
+  .content h2 {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 12px;
+    line-height: 1.5rem;
+  }
 }

@@ -35,11 +35,11 @@ header {
   font-size: 1rem;
   color: var(--white-color);
   font-family: inherit;
+  padding: 20px;
 }
 
 #search::placeholder {
   color: var(--placeholder-color);
-  padding: 1rem;
 }
 
 #search:focus {
@@ -86,11 +86,11 @@ header {
 }
 
 .movie-info span.green {
-  color: var(--light-green);
+  color: var(--light-green-color);
 }
 
 .movie-info span.orange {
-  color: var(--orange);
+  color: var(--orange-color);
 }
 
 .movie-info span.red {

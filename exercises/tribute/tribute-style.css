@@ -6,14 +6,11 @@ body {
   overflow-x: hidden;
 }
 
-#main {
-  background-color: #eee;
-  margin-top: 30px;
-  padding: 30px;
-}
-
 .subheading {
   text-align: center;
+}
+.main {
+  background-color: #eee;
 }
 
 .main-image {
@@ -44,17 +41,18 @@ a:hover {
 .time-line-lists li {
   padding: 10px;
   color: #333;
-}
-
-.Norman-timeline-container {
-  width: 60%;
+  width: 100%;
   margin: auto;
 }
 
-@media screen and (min-width: 300px), (max-width: 2048px) {
+.Norman-timeline-container {
+  width: 70%;
+  margin: auto;
+}
+
+@media screen and (max-width: 500px) {
   .Norman-timeline-container {
-    width: 98%;
-    margin: auto;
+    width: 100%;
   }
 
   .Norman-time-line {
@@ -63,5 +61,14 @@ a:hover {
   }
   .wikipedia-links {
     font-size: 12px;
+  }
+
+  .time-line-lists li {
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .main-img {
+    padding: 5px 0;
   }
 }

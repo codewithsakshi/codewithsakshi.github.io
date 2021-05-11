@@ -13,71 +13,66 @@
 }
 
 body {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    text-align: center;
-    height: 100vh;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  text-align: center;
+  height: 100vh;
 }
 
 .container {
-    display: flex;
-    position: relative;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
-
 
 .split {
   transition: all 1s ease-in-out;
 }
 
 .split-left {
-    background: url(https://images.unsplash.com/photo-1550828486-68812fa3f966?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex: 1;
+  background: url(https://images.unsplash.com/photo-1550828486-68812fa3f966?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
 }
 
 .split-right {
-    background: url(https://images.unsplash.com/photo-1606145797958-2aa69009f500?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex: 1;
+  background: url(https://images.unsplash.com/photo-1606145797958-2aa69009f500?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
 }
 
 h1 {
-    font-size: 60px;
-    color: whitesmoke;
-    margin: auto;
-    margin-top: 25%;
+  font-size: 60px;
+  color: whitesmoke;
+  margin: auto;
+  margin-top: 25%;
 }
 
 .btn {
-    width: 20%px;
-    padding: 24px 90px;
-    border-radius: 1px;
-    border: 3.5px solid white;
-    color: white;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    /* transform: translateX(-50deg); */
-} 
+  padding: 24px 90px;
+  border-radius: 1px;
+  border: 3.5px solid white;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 .split-left .btn:hover {
- background-color: var(--left-btn-hover-color);
+  background-color: var(--left-btn-hover-color);
 }
 
 .split-right .btn:hover {
-    background-color: var(--right-btn-hover-color);
+  background-color: var(--right-btn-hover-color);
 }
 
 .hover-left .split-left {
-  flex:2.3;
-  }
-  
-  .hover-right .split-right {
-    flex: 2.3;
-  }
+  flex: 2.3;
+}
 
-  
+.hover-right .split-right {
+  flex: 2.3;
+}

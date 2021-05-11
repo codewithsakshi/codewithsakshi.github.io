@@ -1,19 +1,17 @@
-let myName = "Sakshi";
+const leftSideElement = document.querySelector(".split-left");
+const rightSideElement = document.querySelector(".split-right");
+const container = document.querySelector(".container");
 
-function getName(firstName) {
-   return firstName + " Mittal";
-}
+leftSideElement.addEventListener("mouseenter", () =>
+  container.classList.add("hover-left")
+);
+leftSideElement.addEventListener("mouseleave", () =>
+  container.classList.remove("hover-left")
+);
 
-console.log(getName(myName));  
-
-const left = document.querySelector(".split-left")
-const right = document.querySelector(".split-right")
-const container = document.querySelector(".container")
-
-left.addEventListener('mouseenter', () => container.classList.add('hover-left'))
-left.addEventListener('mouseleave', () => container.classList.remove('hover-left'))
-
-right.addEventListener('mouseenter', () => container.classList.add('hover-right'))
-right.addEventListener('mouseleave', () => container.classList.remove('hover-right'))
-
-
+rightSideElement.addEventListener("mouseenter", () =>
+  container.classList.add("hover-right")
+);
+rightSideElement.addEventListener("mouseleave", () =>
+  container.classList.remove("hover-right")
+);

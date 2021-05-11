@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --main-heading-color: #ff9a00;
+}
+
+body {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.indian-currency {
+  width: 120px;
+  height: 120px;
+}
+
+.main-heading {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--main-heading-color);
+  padding: 1.1rem;
+}
+
+.currency {
+  border: 2px solid var(--main-heading-color);
+  width: 450px;
+  padding: 0.6rem;
+  margin-top: 2rem;
+}
+
+.swap-btn-icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 2.2rem;
+}
+
+#currency-one,
+#currency-two,
+#amount-one,
+#amount-two {
+  border: 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.currency-value {
+  text-align: right;
+  margin-left: 25%;
+}
+
+.currency-value::placeholder {
+  color: #333;
+  font-size: 1.4rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.rate {
+  color: var(--main-heading-color);
+}
+
+select option {
+  color: var(--main-heading-color);
+  font-size: 12px;
+}
+
+@media screen and(max-width: 500px) {
+  body {
+    justify-content: flex-start;
+  }
+  .main-heading {
+    font-size: 20px;
+    padding: 0;
+    width: 100vw;
+  }
+  .currency {
+    border: 2px solid var(--main-heading-color);
+    width: 250px;
+    padding: 0.3rem;
+    margin-top: 1rem;
+  }
+}

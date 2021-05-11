@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  /* min-height: 100vh; */
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.btn-container {
+  padding: 2rem;
+  border-right: 1px solid #333;
+}
+
+button {
+  display: block;
+  background-color: #fff;
+  border: 1px solid black;
+  width: 220px;
+  padding: 10px 0;
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+  margin: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-container {
+  flex: 2;
+  padding: 2rem;
+}
+
+.main-container .heading {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #333;
+}
+.main-container .content {
+  margin-top: 0.5rem;
+}
+.main-container .content .content-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0.1rem;
+}
+
+.total-wealth {
+  border-top: 2px solid #333;
+  display: flex;
+  justify-content: space-between;
+  line-height: 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}

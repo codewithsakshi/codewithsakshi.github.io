@@ -27,7 +27,7 @@ body {
 }
 
 .fill {
-  background-image: url(./drag.jpg);
+  background-image: url(/assets/personal-web-page.jpg/drag.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

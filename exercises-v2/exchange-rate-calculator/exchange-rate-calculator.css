@@ -96,6 +96,7 @@ select {
 @media screen and(max-width: 500px) {
   body {
     justify-content: flex-start;
+    height: 100vh;
   }
   .main-heading {
     font-size: 20px;

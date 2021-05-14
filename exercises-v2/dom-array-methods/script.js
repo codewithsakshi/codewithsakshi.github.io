@@ -95,3 +95,7 @@ function showMillionairesUser() {
   });
   load();
 }
+
+gameButtonElement.addEventListener("click", () => {
+  console.log(`i was pressed ${gameButtonElement}`);
+});

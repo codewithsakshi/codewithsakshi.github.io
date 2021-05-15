@@ -13,7 +13,7 @@ body {
   background-color: #f0f0f0;
 }
 
-h1 {
+.main-heading {
   margin: 50px 0 30px;
   text-align: center;
 }
@@ -101,4 +101,14 @@ h1 {
   top: -10px;
   left: -30px;
   transform: rotateY(180deg);
+}
+
+@media screen and(max-width: 550px) {
+  .faq-container {
+    width: 100vw;
+  }
+
+  .main-heading {
+    text-align: left;
+  }
 }

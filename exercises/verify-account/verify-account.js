@@ -1,4 +1,5 @@
 const codes = document.querySelectorAll(".code");
+const userEmailElement = document.querySelector(".user-email");
 
 // x = 5
 // y = "satyam"
@@ -9,6 +10,17 @@ const codes = document.querySelectorAll(".code");
 codes[0].focus();
 console.log(codes);
 console.log(`Codes array length is : ${codes.length}`);
+
+let email = localStorage.getItem("email");
+if (!email) {
+  let newEmail = prompt("Please enter your email address");
+  console.log(newEmail);
+  email = newEmail;
+  localStorage.setItem("email", newEmail);
+}
+if (email) {
+  userEmailElement.innerHTML = email;
+}
 
 for (let i = 0; i < codes.length; i++) {
   codes[i].addEventListener("keydown", function (e) {

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --primary-color: #17103b;
+    --secondary-color: #ffa593;
+    --mute-color: #d3edee;
+    --light-color: #d9e5dd;
+    --white-color: rgba(255, 255, 255, 0.17);
+    --light-blue-color: rgba(89, 175, 150, 0.15);
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 10px;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 60px;
+}
+
+h2 {
+   font-size: 12px;
+   line-height: 40px;
+   font-weight: bold;
+}
+
+.main-container {
+   background-color: var(--mute-color);
+   width: 60%;
+   max-width: 1000px;
+   margin: auto;
+   margin-top: 30px;
+   border-radius: 5px;
+   display: flex;
+   padding: 50px 30px 50px 50px;
+}
+
+.sub-container-1 {
+flex: 3;
+}
+.sub-container-2 {
+flex: 1;
+}
+.container-2 {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 15px;    
+}
+
+.para {
+ font-weight: bold;
+ margin-bottom: 10px;
+ padding: 5px;
+}
+
+.list-section {
+    margin-left: 30px;
+    max-height: 500px;
+    text-align: left;
+    background-color: var(--white-color);
+    border: 1px solid beige;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.list-space {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 800px;
+}
+
+.box-1 {
+    /* margin-top: 30px; */
+    flex: 1;
+}
+.box-2 {
+    /* margin-top: 50px;
+    margin-bottom: 30px; */
+    flex: 1;
+}
+
+.box-3 {
+    margin-top: 30px;
+    text-align: left; 
+    flex: 1;
+}
+
+.box-4 {
+    margin-top: 50px;
+    padding: 20px;
+    width: 150px;
+    background-color: var(--light-blue-color);
+    border-radius: 5px;
+    flex: 1;
+}
+
+ol li {
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    padding: 8px;
+    width: 130px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 60px; 
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bold;    
+}
+
+button:focus {
+    outline: none;
+}
+
+.list-item {
+    background-color: var(--light-color);
+}

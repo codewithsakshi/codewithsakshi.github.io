@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,300;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: "Roboto:ital", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.section-1 {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-1-part-2 {
+  flex: 1;
+}
+
+.section-1 ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  /* cursor: pointer; */
+}
+
+.section-1 ul li {
+  border-bottom: 2px solid transparent;
+}
+.section-1 ul li:hover {
+  border-bottom: 2px solid #262626;
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
+}
+
+.section-1 img {
+  width: 110px;
+}
+
+.section-1-list-item-container {
+  flex: 1;
+  width: 60%;
+}
+
+.header-icons-container {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-2 {
+  background-image: url("https://i.ibb.co/zGSDGCL/slide1.png");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+  text-align: center;
+}
+
+.section-2 h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.section-2-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  height: 70%;
+}
+
+.btn {
+  background-color: #262626;
+  width: 140px;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.home-cards-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+}
+
+.home-card {
+  width: 24%;
+  /* margin: auto; */
+}
+
+.home-card img {
+  width: 100%;
+}
+
+.home-card a {
+  display: block;
+  color: #0067b8;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.home-card h3 {
+  font-weight: bold;
+}
+.X-box-game {
+  background-image: url("https://i.ibb.co/tBJGPD9/xbox.png");
+  background-size: cover;
+  height: 350px;
+  margin: 30px 0 0 0;
+  width: 100%;
+}
+
+.X-box-game h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.X-box-content {
+  width: 40%;
+  font-size: 16px;
+  padding: 50px 0 0 30px;
+}
+
+.carbon-section {
+  background-image: url("https://i.ibb.co/72cgtsz/carbon.jpg");
+  background-size: cover;
+  height: 350px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.carbon-section-content {
+  width: 50%;
+  font-size: 16px;
+  padding: 0px 0 0 30px;
+  /* margin-top: 30px; */
+}
+
+.carbon-btn {
+  background-color: white;
+  color: #262626;
+}
+
+.social-media-section {
+  display: flex;
+  width: 28%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.head-links-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-size: 13px;
+  background-color: #f2f2f2;
+  color: #616161;
+  font-weight: 500;
+}
+
+.links-container {
+  width: 17%;
+}
+
+.links-container li {
+  list-style-type: none;
+  padding: 8px;
+}
+
+.footer-links-container {
+  background-color: #f2f2f2;
+  color: #616161;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  margin: auto;
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links li {
+  list-style-type: none;
+  margin: 20px 0 0px 30px;
+}

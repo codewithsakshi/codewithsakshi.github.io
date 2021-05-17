@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --body-bg-color: rgba(155, 89, 182, 0.7);
+  --border-color: #eee;
+  --white-color: #fff;
+  --list-color: #777;
+  --active-color: #8e44ad;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.phone {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--border-color);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  max-width: 330px;
+}
+
+.content {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  height: calc(100% - 60px);
+  transition: opacity 0.4s ease;
+}
+
+.content.show {
+  opacity: 1;
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: -5px;
+}
+
+nav ul {
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  height: 60px;
+}
+
+nav ul li {
+  color: var(--list-color);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+small {
+  font-size: 12px;
+  margin: 2px 0;
+}
+
+nav ul li:hover,
+nav ul li.active {
+  color: var(--active-color);
+}
+
+@media screen and (max-width: 500px) {
+  .phone {
+    /* height: 600px; */
+    max-width: 500px;
+  }
+}

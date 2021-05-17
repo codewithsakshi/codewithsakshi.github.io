@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+  --white-color: #fff;
+  --placeholder-color: #7378c5;
+  --movie-info-color: #eee;
+  --light-green-color: lightgreen;
+  --orange-color: orange;
+  --red-color: red;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  height: 45px;
+  width: 240px;
+  font-size: 1rem;
+  color: var(--white-color);
+  font-family: inherit;
+  padding: 20px;
+}
+
+#search::placeholder {
+  color: var(--placeholder-color);
+}
+
+#search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 22%;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 3px;
+  position: relative;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: var(--movie-info-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.movie-info span {
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  padding: 5px 8px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: var(--light-green-color);
+}
+
+.movie-info span.orange {
+  color: var(--orange-color);
+}
+
+.movie-info span.red {
+  color: var(--red-color);
+}
+
+.overview {
+  background-color: var(--white-color);
+  position: absolute;
+  padding: 2rem;
+  left: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 10px;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    width: 100%;
+  }
+
+  .movie {
+    width: 41%;
+    height: 230px;
+  }
+
+  .movie img {
+    height: 180px;
+  }
+
+  .movie-info {
+    font-size: 8px;
+    justify-content: center;
+  }
+
+  #search {
+    width: 120px;
+    height: 35px;
+  }
+
+  #search::placeholder {
+    font-size: 14px;
+  }
+}

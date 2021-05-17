@@ -5,7 +5,13 @@ const totalRows = rows * 3;
 
 for (let i = 0; i < totalRows; i++) {
   const img = document.createElement("img");
-  img.src = `${unsplashURL}${getRandomSize()}`;
+
+  console.log({ size: getRandomSize() });
+
+  const imageUrl = `${unsplashURL}${getRandomSize()}`;
+
+  console.log("Image URL is ", imageUrl);
+  img.src = imageUrl;
   container.appendChild(img);
 }
 
@@ -14,5 +20,5 @@ function getRandomSize() {
 }
 
 function getRandomNo() {
-  return Math.floor(Math.random() * 10) + 300;
+  return Math.floor(Math.random() * 10) + 500;
 }

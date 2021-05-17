@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --figma-btn: (#fff);
+    --background-color: #ED836D;
+    --white-color: #fff;
+}
+
+body {
+    font-family: "Roboto slab", sans-serif;
+    background-color: var(--background-color);
+    font-size: 13px;
+}
+
+.main-container {
+    background-color: var(--white-color);
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.figma-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 105px;
+    border-radius: 50px;
+    padding: 8px;
+    border: none;
+    align-self: flex-end;
+}
+
+.figma-img {
+    display: block;
+    width: 16px;
+}
+
+.figma-text {
+    /* display: block; */
+}
+
+.figma-btn:focus {
+    outline: none;
+}
+
+.section-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-1-signup-btn {
+    flex: 1;
+    justify-content: space-between;  
+    align-items: flex-end;
+    align-self: flex-end;
+    width: 10%; 
+}
+
+.signup-btn {
+    width: 95px;
+    padding: 7px;
+    border-radius: 50px;
+    border: none;
+    color: var(--white-color);
+    background-color: linear-gradient(dd5e89
+}
+
+.signup-btn:focus {
+    outline: none;
+}
+
+.section-1-list {
+    flex: 1;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;  
+}
+
+a {
+    text-decoration: none;
+}
+
+ .section-2 { 
+    background-image: url(/assets/clothes.jpg);
+    background-size: cover;
+    width: 100%;
+    /* height: 70%; */
+    color: var(--white-color);
+}
+
+.section-2-container {
+    width: 40%;
+    margin:auto;
+    text-align: center;
+    background-color: #5C6C6C;
+}
+
+.section-2 img {
+    opacity: 0.1;
+}

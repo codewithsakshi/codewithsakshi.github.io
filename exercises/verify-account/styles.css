@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --white-color: #fff;
+  --border-color: #000;
+  --para-color: #777;
+  --background-color: #fbfcfe;
+  --footer-bg-color: #eaeaea;
+}
+
+body {
+  font-family: "Mulish", Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background-color: var(--white-color);
+  border: 3px solid var(--border-color);
+  width: 60%;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 30px 0;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.container p {
+  width: 75%;
+  margin: auto;
+  color: #333;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.code-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 25px 0;
+  justify-content: space-between;
+}
+
+.code {
+  width: 15.2%;
+  border-radius: 4px;
+  height: 120px;
+  border: 1px solid #eee;
+  text-align: center;
+  font-size: 75px;
+}
+
+.info {
+  background-color: var(--footer-bg-color);
+  margin: auto;
+  width: 62%;
+  height: 60px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.info p {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  color: var(--para-color);
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.code:valid {
+  border-color: #3498db;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+}

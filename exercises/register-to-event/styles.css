@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --background-color: linear-gradient(#e55d87, #5fc3e4);
+  --textColor: #101010;
+}
+
+body {
+  font-family: "Roboto Slab", sens-serif;
+  font-size: 15px;
+  background-image: var(--background-color);
+  color: var(--textColor);
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sub-container-1 {
+  flex: 1;
+  width: 80%;
+  padding: 3% 3% 3% 10%;
+}
+
+.sub-container-1-part-1 {
+  text-align: left;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+.label-elements {
+  display: flex;
+  font-size: 13px;
+  line-height: 19px;
+  flex-wrap: wrap;
+}
+
+.label-elements-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+  display: block;
+  padding: 10px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  border-radius: 2px;
+  border: none;
+  width: 100%;
+  min-width: 150px;
+}
+
+input:focus {
+  outline: none;
+}
+
+select {
+  min-width: 150px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+}
+
+select:focus {
+  outline: none;
+}
+
+textarea {
+  width: 95%;
+  resize: none;
+  border-radius: 2px;
+  font-size: 12px;
+}
+
+textarea:focus {
+  outline: none;
+}
+.checkbox {
+  display: inline;
+  margin: 12px 0;
+}
+
+button {
+  padding: 15px 30px;
+  margin: 15px 0;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+button:focus {
+  outline: none;
+}
+
+.sub-container-2 {
+  background-color: #3e4149;
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px 20px 0 20px;
+}
+
+.img-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.img-logo img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+h3 {
+  margin: 20px 0 12px 30px;
+}
+
+.figma-btn {
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-end;
+  width: 125px;
+}
+
+.feature-icon {
+  margin: 10px;
+}
+
+.share {
+  margin-left: 30px;
+}
+
+.icon-1 {
+  margin-left: 30px;
+}
+
+.guest-faculty {
+    display: flex;
+    flex-direction: column;
+  margin-top: 50px;
+}
+
+.figma-img {
+  display: block;
+  width: 16px;
+}
+
+.figma-text {
+  display: block;
+}
+
+textarea {
+  padding: 7px;
+}
+
+/* For mobile device */
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .sub-container-1-part-1 {
+    margin-right: 10px;
+  }
+  .guest-faculty {
+    margin-top: 20px;
+  }
+
+  .sub-container-2 {
+    flex: 1;
+  }
+  .social-media-links {
+    display: none;
+  }
+}
+
+/* @media screen and (min-width: 640px) and (max-width: 768px){
+
+} */

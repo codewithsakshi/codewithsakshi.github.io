@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --body-bg-color: #7bdaf3;
+  --white-color: #fff;
+  --tool-bg-color: #9ec862;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+
+.add {
+  background-color: var(--tool-bg-color);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 1.1rem;
+  border-radius: 2px;
+  border: none;
+  color: var(--white-color);
+  font-weight: 400;
+}
+
+.add:active {
+  transform: scale(0.98);
+}
+
+.add:focus {
+  outline: none;
+}
+
+.note {
+  background-color: var(--white-color);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  margin: 30px 20px;
+  height: 400px;
+  width: 400px;
+}
+
+.tools {
+  background-color: var(--tool-bg-color);
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.note .tools button {
+  background-color: transparent;
+  border: none;
+  color: var(--white-color);
+  margin: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  outline: 0;
+  font-size: 1.2rem;
+  border: none;
+  height: 400px;
+  width: 100%;
+}
+
+.main {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}

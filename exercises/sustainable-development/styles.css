@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --main-img-bg-color: #fbf8f6;
+  --btn-color: #0e6248;
+  --white-color: #fff;
+  --text-color: #272727;
+  --border-color: #dddddd;
+}
+
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.main-container {
+  width: 100%;
+  margin: auto;
+}
+
+.container-1 {
+  background-color: var(--main-img-bg-color);
+}
+
+.sub-container {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(/assets/colllecting-banana);
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
+  color: var(--white-color);
+  /* opacity: 0.95; */
+}
+
+.header-section-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+}
+
+.header-links-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.4;
+  margin-left: 15%;
+  margin-right: -20px;
+}
+
+.earth-heart-foundation {
+  flex: 0.15;
+  font-size: 9px;
+  margin: 0 10%;
+  text-transform: uppercase;
+}
+
+.header-links-right {
+  display: flex;
+  flex: 0.4;
+  margin-right: 15%;
+  margin-left: -20px;
+  justify-content: space-between;
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 9px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+ul li a:hover {
+  color: #333;
+}
+
+.share-btn {
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 2px;
+  font-size: 9px;
+  padding: 4px 7px;
+}
+
+.transforming-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  margin: auto;
+  height: 74%;
+  text-align: center;
+}
+
+.transforming-btn {
+  text-align: center;
+  padding: 10px;
+}
+
+.volunteer-btn {
+  font-size: 9px;
+  padding: 6px 17px;
+  border-radius: 3px;
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  border: none;
+  margin-right: 10px;
+}
+
+.EHFC-para {
+  font-size: 11px;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.learn-more-white-btn {
+  font-size: 10px;
+  padding: 4px 7px;
+  border-radius: 3px;
+  border: none;
+  margin-left: 10px;
+}
+
+/* home cards section */
+
+.home-cards-main-container {
+  width: 85%;
+  margin: auto;
+  padding: 50px;
+}
+
+.what-we-do {
+  font-size: 8px;
+  text-transform: uppercase;
+  color: var(--btn-color);
+  font-weight: 900;
+}
+.our-mission-para {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our-mission-para p {
+  font-size: 12px;
+  font-weight: bold;
+  width: 65%;
+}
+
+.our-mission-para button {
+  margin-right: 4%;
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 3px;
+  font-size: 9px;
+  padding: 7px 16px;
+}
+
+.home-cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8%;
+}
+
+.home-card {
+  border: 1px solid var(--border-color);
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.home-card img {
+  width: 180px;
+  transform: translate(18px, -18px);
+}
+
+.home-card p {
+  font-size: 10px;
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+.home-card h5 {
+  font-size: 10px;
+  font-weight: 900;
+  width: 80%;
+  margin: auto;
+}
+
+.home-card-btn button {
+  font-size: 10px;
+  padding: 5px 7px;
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 2px;
+}
+
+.home-card-btn {
+  width: 50%;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.donation-plan-money {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--main-img-bg-color);
+  padding: 20px 0;
+  margin-top: 10%;
+}
+
+.donation-plan-money h5 {
+  font-weight: 800;
+}
+
+.donation-plan-money p {
+  font-size: 9px;
+  line-height: 17px;
+  font-weight: 600;
+}
+
+.multiple-img-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* align-items: center; */
+  /* overflow-x: hidden; */
+}
+
+.four-img-section {
+  width: 22%;
+}
+
+.four-img-upper-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.four-img-lower-part {
+  display: flex;
+  justify-content: space-between;
+}
+
+.one-man {
+  width: 113px;
+  height: 113px;
+  /* padding: 10px; */
+}
+
+.one-man-box {
+  height: 113px;
+  width: 113px;
+  padding-left: -10px;
+}
+
+.three-girls {
+  width: 94px;
+  height: 94px;
+}
+
+.three-girls-box {
+  height: 88px;
+  width: 88px;
+  margin-bottom: 10px;
+}
+
+.forest {
+  width: 44px;
+  height: 130px;
+}
+
+.forest-box {
+  height: 130px;
+  width: 44px;
+}
+
+.clouds {
+  width: 155px;
+  height: 120px;
+}
+
+.clouds-box {
+  margin-top: 10px;
+  height: 120px;
+}
+
+.water-waves {
+  width: 15%;
+}
+
+.water-waves img {
+  width: 160px;
+  height: 225px;
+}
+
+.water-waves-box {
+  margin-top: 20px;
+  margin-left: -10px;
+  width: 160px;
+  height: 225px;
+}
+
+.three-images-section {
+  width: 25%;
+}
+
+.one-girl {
+  width: 250px;
+  height: 100px;
+}
+
+.one-girl-box {
+  width: 250px;
+  height: 100px;
+}
+
+.girl-reading-book {
+  width: 115px;
+  height: 115px;
+}
+
+.girl-reading-book {
+  width: 115px;
+  height: 115px;
+}
+
+.girl-reading-book-box {
+  width: 115px;
+  height: 115px;
+}
+
+.fruits {
+  width: 115px;
+  height: 115px;
+}
+
+.fruits-box {
+  width: 115px;
+  height: 115px;
+  margin-top: 15px;
+}
+
+.mountains {
+  width: 11%;
+}
+
+.mountains img {
+  width: 112px;
+  height: 215px;
+}
+
+.mountains-box {
+  width: 110px;
+  height: 210px;
+  margin-top: 30px;
+  margin-left: -5px;
+}
+
+.three-images-lower-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.four-images-section-2 {
+  width: 20%;
+}
+
+.four-images-2-upper-part {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.four-images-2-lower-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.beach {
+  width: 100px;
+  height: 100px;
+}
+
+.beach-box {
+  width: 100px;
+  height: 100px;
+}
+
+.snow {
+  width: 90px;
+  height: 90px;
+}
+
+.snow-box {
+  width: 90px;
+  height: 90px;
+  margin-right: 0;
+  /* margin-bottom: 5px; */
+}
+
+.lemon {
+  width: 130px;
+  height: 130px;
+}
+
+.lemon-box {
+  width: 130px;
+  height: 130px;
+}
+
+.dark-night {
+  width: 63px;
+  height: 150px;
+}
+
+.dark-night-box {
+  width: 63px;
+  height: 150px;
+  margin-right: 0;
+}
+
+.border-box {
+  border: 1px solid var(--border-color);
+  margin-right: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.border-box img {
+  transform: translate(12px, -12px);
+}
+
+/* donate form section */
+
+.donation-form-section {
+  width: 75%;
+  margin: auto;
+  /* padding: 50px; */
+  display: flex;
+  padding-top: 30px;
+}
+
+.donation-need {
+  flex: 1;
+  /* width: 50%; */
+  margin-left: 0;
+}
+
+.want-to-help {
+  font-size: 14px;
+  font-weight: bold;
+  width: 60%;
+  margin-top: 7%;
+}
+
+.donation-scnd-para {
+  font-size: 10px;
+  width: 60%;
+  margin: 13px 0;
+}
+
+.donation-third-para {
+  font-size: 10px;
+  width: 60%;
+}
+
+.donation-form-container {
+  flex: 1;
+  /* width: 50%; */
+  margin-left: 0;
+  box-shadow: 0 0 20px 0 rgba(16, 114, 83, 0.16);
+  border: 1px solid #fbf8f6;
+  background-color: var(--white-color);
+  border-radius: 2px;
+}
+
+.donation-form {
+  width: 70%;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.donation-form label {
+  display: block;
+  font-size: 10px;
+  padding-top: 15px;
+}
+
+.donation-form input {
+  padding: 5px 0;
+  width: 100%;
+}
+
+.donate-btn {
+  display: block;
+  background-color: var(--btn-color);
+  border: none;
+  border-radius: 3px;
+  padding: 7px 0;
+  width: 100px;
+  margin-top: 20px;
+  color: var(--white-color);
+  font-size: 10px;
+  box-shadow: 0 0 20px 0 rgba(16, 114, 83, 0.16);
+}
+
+/* .home cards 2 */
+.reading-resources {
+  font-size: 8px;
+  text-transform: uppercase;
+  color: var(--btn-color);
+  font-weight: 900;
+  line-height: 20px;
+}
+
+.nulla-eu-rutrum {
+  padding-top: 20px;
+}
+
+.more-sustainable-projects {
+  width: 98%;
+  margin-top: 8%;
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  flex-direction: column;
+  text-align: center;
+  border-radius: 3px;
+  padding: 30px;
+}
+
+.more-sustainable-projects .para-1 {
+  font-size: 14px;
+  letter-spacing: 0.03ch;
+  font-weight: bold;
+}
+
+.more-sustainable-projects .para-2 {
+  font-size: 10px;
+  line-height: 25px;
+}
+
+.more-sustainable-projects input {
+  padding: 3px 0;
+  border-radius: 2px;
+  border: none;
+}
+
+.more-sustainable-projects button {
+  border: none;
+  color: var(--btn-color);
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px;
+  margin-left: 0;
+}
+
+/* button */
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-color);
+  color: var(--white-color);
+  padding: 20px;
+}
+
+footer .footer-left {
+  width: 30%;
+  margin: auto;
+  font-size: 10px;
+}
+
+footer .footer-left .para-1 {
+  font-size: 10px;
+  width: 30%;
+  line-height: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+footer .footer-left .para-2 {
+  padding-top: 10px;
+}
+footer .footer-right {
+  width: 30%;
+  font-size: 10px;
+  text-align: end;
+  margin: auto;
+}
+
+.share-icon {
+  padding: 5px;
+}
+
+.terms-condition {
+  margin-bottom: 15px;
+}
+
+.currency-input-container {
+  display: flex;
+}
+
+.currency-input-container select {
+  border-right: 0;
+  border-radius: 0;
+  margin-right: -1px;
+}

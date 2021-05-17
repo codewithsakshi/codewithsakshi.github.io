@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --img-bg-color: #ffc5cc;
+  --btn-color: #b61428;
+  --perfume-color: #151618;
+  --links-color: #6a6768;
+  --secret-color: #a0a0a0;
+  --icon-bg-color: #f1dee1;
+  --footer-btn-color: #d8d8d8;
+  --white-color: #fff;
+}
+
+body {
+  width: 95vw;
+  background-color: #f1dee1;
+  margin: auto;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  height: 93vh;
+}
+
+.main-container {
+  background-color: var(--white-color);
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 25px;
+}
+
+.icon-btn {
+  margin-left: 35px;
+  border-radius: 50px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  color: var(--links-color);
+  text-align: center;
+  font-weight: 40px;
+  font-size: 12px;
+}
+
+.icon-btn:focus {
+  outline: none;
+}
+
+.victoria-header {
+  display: flex;
+  flex: 0.3;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--perfume-color);
+  margin-left: 20px;
+}
+
+.line {
+  margin: 0 5px;
+  text-align: center;
+  color: var(--links-color);
+  height: 23px;
+}
+
+.secret {
+  font-size: 8px;
+  line-height: 10px;
+  width: 5px;
+  font-weight: 700px;
+  color: var(--links-color);
+}
+
+.nav-links {
+  display: flex;
+  flex: 0.6;
+  margin-left: 20%;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  flex: 0.5;
+  margin-left: 20%;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: -30%;
+  list-style-type: none;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: var(--links-color);
+  font-size: 8px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--perfume-color);
+}
+
+.oval-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  border: none;
+  margin-right: -8%;
+  text-align: center;
+}
+
+.oval-img {
+  width: 7px;
+  height: 9px;
+}
+
+.oval-btn:focus {
+  outline: none;
+}
+
+.perfume-container {
+  display: flex;
+  padding: 7% 0;
+}
+
+.perfume-text-container {
+  flex: 1;
+}
+
+.perfume-text-sub-container {
+  width: 220px;
+  margin-left: 23%;
+}
+
+h1 {
+  margin-top: 5%;
+  font-size: 50px;
+  color: var(--perfume-color);
+  font-weight: normal;
+  letter-spacing: 0.07rem;
+}
+
+.para {
+  font-size: 8px;
+  margin: 10px 0;
+  color: var(--links-color);
+  line-height: 15px;
+}
+
+.product-btn {
+  width: 100px;
+  border-radius: 50px;
+  padding: 10px 7px;
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  border: none;
+  text-transform: uppercase;
+  font-size: 6px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.product-btn:focus {
+  outline: none;
+}
+
+.product-btn:hover {
+  cursor: pointer;
+}
+
+.image-container {
+  display: flex;
+}
+
+.rectangle {
+  background-color: var(--img-bg-color);
+  width: 380px;
+  height: 180px;
+  margin-right: -50%;
+}
+
+.rose-img {
+  width: 130px;
+  transform: translate(-13px, 75px);
+  margin-top: 15%;
+}
+
+.perfume-img {
+  width: 93px;
+  height: 130px;
+  transform: scale(2.2);
+}
+
+.footer-btn-container {
+  width: 630px;
+  margin: auto;
+}
+
+.footer-btn {
+  padding: 3.5px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--footer-btn-color);
+  /* margin-bottom: -40px; */
+}
+
+.footer-btn:hover {
+  cursor: pointer;
+}
+
+.footer-big-btn {
+  background-color: var(--btn-color);
+  padding: 3.5px 10px;
+  border-radius: 50px;
+  border: none;
+}
+
+.footer-big-btn:hover {
+  cursor: pointer;
+}
+
+.footer-btn:focus {
+  outline: none;
+}
+
+.footer-big-btn:focus {
+  outline: none;
+}

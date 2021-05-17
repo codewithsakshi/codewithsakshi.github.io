@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --primary-color: #30336b;
+  --secondary-color: #be2edd;
+  --white-color: #fff;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+  transition: all 0.3s linear;
+}
+
+body.show-nav {
+  transform: translateX(200px);
+}
+
+.nav-bar {
+  background-color: var(--primary-color);
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  transform: translate(-100%);
+  transition: all 0.4s linear;
+}
+
+.nav-bar.show-nav {
+  transform: translate(0);
+}
+
+.nav-bar .logo {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.nav-bar img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+}
+
+.links-container li {
+  border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+  padding: 1.4rem;
+  margin-left: 10px;
+  list-style-type: none;
+}
+
+.nav-bar ul li:first-of-type {
+  border-top: 2px solid rgba(200, 200, 200, 0.1);
+}
+
+.links-container li a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.links-container li a:hover {
+  text-decoration: underline;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 1.5rem 0;
+  color: var(--white-color);
+}
+
+header h1 {
+  padding: 1rem;
+  font-size: 2.6rem;
+}
+
+header p {
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.signup-btn {
+  padding: 0.7rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1.2rem;
+  background-color: var(--secondary-color);
+  border: 0;
+}
+
+header button a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+header button:focus {
+  outline: 0;
+}
+
+.toggle {
+  position: absolute;
+  top: 2.5rem;
+  left: 20px;
+  color: var(--white-color);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+  padding-top: 2rem;
+}
+
+.container h2,
+p {
+  padding: 10px;
+}
+
+.container p {
+  line-height: 1.3rem;
+  font-size: 1rem;
+}
+
+.container ul {
+  padding: 10px 0;
+  padding-left: 3rem;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: none;
+  animation-duration: 2s linear;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+  /* animation-name: modalopen; */
+  /* animation-duration: var(--modal-duration); */
+}
+
+.modal-header {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.modal-content p {
+  padding: 20px 0 0 20px;
+  margin-top: 20px;
+}
+
+.modal-form {
+  width: 90%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.modal-form label {
+  display: block;
+  padding: 15px 0 5px 0;
+}
+
+.modal-form input {
+  padding: 8px;
+  width: 100%;
+}
+
+input.submit-btn {
+  width: 70px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 3px;
+  margin: 15px 0;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

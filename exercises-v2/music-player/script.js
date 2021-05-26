@@ -19,7 +19,7 @@ let songIndex = 2;
 
 playBtnElement.addEventListener("click", () => {
   const isPlaying = playBtnElement.classList.contains("play");
-  console.log({ isPlaying });
+  // console.log({ isPlaying });
   if (isPlaying) {
     pauseSong();
   } else {
@@ -29,10 +29,10 @@ playBtnElement.addEventListener("click", () => {
 
 prevBtnElement.addEventListener("click", prevSong);
 nextBtnElement.addEventListener("click", nextSong);
-// audioSongElement.addEventListener("timeupdate", updateProgress);
-// audioSongElement.addEventListener("ended", nextSong);
-// audioSongElement.addEventListener("timeupdate", durTime);
-// progressContainer.addEventListener("click", setProgress);
+audioSongElement.addEventListener("timeupdate", updateProgress);
+audioSongElement.addEventListener("ended", nextSong);
+audioSongElement.addEventListener("timeupdate", durTime);
+progressContainer.addEventListener("click", setProgress);
 
 loadSongs(songs[songIndex]);
 
@@ -48,7 +48,6 @@ function playSong() {
   const iconElement = playBtnElement.querySelector(".fas");
   iconElement.classList.remove("fa-play");
   iconElement.classList.add("fa-pause");
-  // playBtnElement.innerHTML = "<i class='fas fa-pause'>";
   audioSongElement.play();
 }
 

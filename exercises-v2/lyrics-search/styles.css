@@ -15,6 +15,21 @@ body {
   align-items: center;
 }
 
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 40vh;
+}
+.result-container {
+  flex: 1;
+  padding: 2rem;
+  border-right: 3px solid #8b8b8b;
+}
+
+.lyrics-container {
+  padding: 2rem;
+  flex: 1;
+}
 header button {
   cursor: pointer;
 }
@@ -91,4 +106,32 @@ form button {
 .container {
   padding: 30px 0;
   font-size: 1rem;
+}
+
+.container p {
+  text-align: center;
+}
+
+.get-lyrics-btn {
+  background-color: #8d56fd;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  padding: 4px 10px;
+  margin: 0.5rem;
+}
+
+.result-container {
+  list-style-type: none;
+  counter-reset: counter-name;
+}
+
+.result-container li::before {
+  position: relative;
+}
+
+.result-container li::before {
+  counter-increment: counter-name;
+  content: counter(counter-name) ")";
+  margin-right: 5px;
 }

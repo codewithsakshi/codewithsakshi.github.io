@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --text-color: #2f2d2d;
+  --text-second-color: #434343;
+  --sky-blue-color: #7796fe;
+  --orange-color: #ff865b;
+  --violet-color: #8937dc;
+  --green-color: #7cca84;
+  --blue-color: #130242;
+  --table-text-color: #544837;
+  --hero-btn-color: #4a4edd;
+  --header-btn-color: #7f83ff;
+  --white-color: #fff;
+  font-size: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.header-logo {
+  width: 100px;
+}
+
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.17;
+}
+
+.header-right a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.header-right button {
+  font-size: 1.3rem;
+  color: var(--white-color);
+  background-color: var(--header-btn-color);
+  border: 0;
+  border-radius: 50px;
+  width: 80px;
+  height: 25px;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section .hero-section-title {
+  width: 45%;
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+}
+
+.hero-section .hero-btns {
+  margin-top: 2.5rem;
+}
+
+.hero-btns button {
+  padding: 0.65rem 2.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3rem;
+  background-color: var(--hero-btn-color);
+  color: var(--white-color);
+  margin: 0.7rem;
+  cursor: pointer;
+}
+
+.hero-btns button:hover {
+  opacity: 0.8;
+}
+
+.hero-section .hero-img {
+  padding-top: 5rem;
+}
+
+/* container */
+
+.container {
+  padding-top: 4rem;
+}
+
+.container h3 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.container .container-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.container-links .links {
+  margin-left: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.container-links a {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.container-links img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0.8rem;
+  margin-right: 1rem;
+}
+
+.container-links .post-links img {
+  background-color: var(--sky-blue-color);
+}
+.container-links .applied-links img {
+  background-color: var(--orange-color);
+  opacity: 0.2;
+}
+
+.container-links .assigned-links img {
+  background-color: var(--green-color);
+  opacity: 0.2;
+}
+
+.container-links .assigned-links {
+  margin-right: 2px;
+}
+
+.container-sub-container {
+  display: flex;
+  padding-top: 4rem;
+}
+.container-sub-container .amazing-rectangle {
+  background-color: rgba(119, 150, 254, 0.97);
+  color: var(--white-color);
+  width: 40%;
+  min-width: 200px;
+  margin: auto;
+  margin-top: 4%;
+  border-radius: 15px;
+  transform: translateX(10%);
+  padding: 3rem 0;
+}
+.container-sub-container .amazing-rectangle h3 {
+  text-align: inherit;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 10%;
+  padding-bottom: 4px;
+}
+.container-sub-container .amazing-rectangle p {
+  width: 70%;
+  margin-left: 10%;
+  line-height: 1.7rem;
+  margin-bottom: 1rem;
+}
+.container-sub-container img {
+  flex: 0.5;
+  width: 50%;
+}
+
+.hubble-container {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  margin-top: 3rem;
+}
+.hubble-container img {
+  width: 40%;
+}
+.hubble-container .hubble-rectangle {
+  width: 35%;
+  margin: auto;
+  background-color: var(--orange-color);
+  opacity: 0.8;
+  color: var(--white-color);
+  padding: 3rem 0;
+  border-radius: 15px;
+  min-width: 250px;
+}
+.hubble-container .hubble-rectangle h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: inherit;
+  padding-left: 10%;
+}
+.hubble-container .hubble-rectangle p {
+  width: 70%;
+  margin-left: 10%;
+}
+
+.container-links .work-links img {
+  background-color: #fb1488;
+}
+.contact-lens-rectangle {
+  width: 40%;
+  margin: auto;
+  background-color: var(--violet-color);
+  opacity: 0.8;
+  color: var(--white-color);
+  padding: 4rem;
+  border-radius: 15px;
+  min-width: 250px;
+}
+.contact-lens-rectangle h3 {
+  font-size: 1.5rem;
+  text-align: inherit;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.contact-lens-rectangle p {
+  width: 90%;
+}
+
+.hubble-rectangle-2 {
+  width: 40%;
+  margin: auto;
+  background-color: var(--green-color);
+  color: var(--white-color);
+  padding: 5rem;
+  border-radius: 15px;
+  min-width: 250px;
+}
+
+/* subscribe section */
+.subscribe-section {
+  height: 100vh;
+  min-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.subscribe-section h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.subscribe-section p {
+  width: 30%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  text-align: center;
+  padding-top: 1rem;
+  font-weight: 500;
+}
+.subscribe-section div {
+  background-color: rgba(216, 216, 216, 0.39);
+  width: 50%;
+  margin: 0 auto;
+  height: 50px;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.subscribe-section div button {
+  height: 100%;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-size: 1.4rem;
+  border-radius: 5px;
+  border: none;
+  width: 27%;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-content {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  padding: 3rem;
+}
+.footer-content img {
+  width: 100px;
+  height: 30px;
+  margin-right: 10px;
+}
+.footer-content table {
+  width: 60%;
+  min-width: 250px;
+  text-transform: capitalize;
+}
+
+.footer-content table tr th {
+  text-align: left;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.footer-content table tr td {
+  font-size: 1.1rem;
+  padding: 2px;
+}
+
+.footer-content table tr td .fa-facebook-f {
+  color: blue;
+}
+.footer-content table tr td .fa-twitter {
+  color: var(--header-btn-color);
+}
+.footer-content table tr td .fa-instagram {
+  color: red;
+}
+.footer-content table tr td .fa-twitter .footer-img {
+  padding-top: 5rem;
+}
+
+.footer-img img {
+  width: 98vw;
+}

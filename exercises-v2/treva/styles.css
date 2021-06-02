@@ -112,7 +112,7 @@ background-color: var(--hero-btn-color);
 }
 .hero-btns button:hover {
   opacity: 0.8;
-}
+ }
 .hero-img-container {
   overflow-x: hidden;
   margin-top: 5rem;

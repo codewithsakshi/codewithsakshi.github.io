@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url('https://raw.githubusercontent.com/bradtraversy/vanillawebprojects/master/relaxer-app/img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-family: " Montserrat", sans-serif;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  position: relative;
+  /* transform: scale(1) */
+}
+
+.circle {
+  background-color: #010f1c;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gradient-circle {
+  background-image: conic-gradient( #55b7a4 0%,
+  #4ca493 40%,
+  #fff 40%,
+  #fff 60%,
+  #336d62 60%,
+  #2a5b52 100%);
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -2;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 195px;
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+.pointer {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 23px;
+  width: 23px;
+  display: block;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container.grow{
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1)
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container.shrink {
+    animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}

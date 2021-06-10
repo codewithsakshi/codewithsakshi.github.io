@@ -1,9 +1,9 @@
 const container = document.querySelector('.container');
 const textEl = document.querySelector('.text');
 
-const totalTime = 7500;
-const breatheTime = (totalTime / 5) * 2;
-const holdTime = totalTime / 5;
+const totalTimeMilliSec = 7500;
+const breatheTime = (totalTimeMilliSec / 5) * 2;
+const holdTime = totalTimeMilliSec / 5;
 
 breatheAnimation();
 

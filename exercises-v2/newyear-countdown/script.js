@@ -2,7 +2,8 @@ const daysEl = document.querySelector('.days');
 const hoursEl = document.querySelector('.hours');
 const minutesEl = document.querySelector('.minutes');
 const secondsEl = document.querySelector('.seconds');
-const year = document.querySelector('.year');
+const yearEl = document.querySelector('.year');
+
 const loadingImg = document.querySelector('.loadingImg');
 const countdown = document.querySelector('.countdown');
 
@@ -10,7 +11,7 @@ const currentYear = new Date().getFullYear();
 
 const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`);
 
-year.innerHTML = currentYear + 1;
+yearEl.innerHTML = currentYear + 1;
 
 function updateCountdown() {
   const currentTime = new Date();

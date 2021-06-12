@@ -21,6 +21,8 @@ closeBtnEl.addEventListener('click', () => {
 
 let score = 0;
 
+const SPEED_FACTOR = 1.1;
+
 const brickRowCount = 5;
 const brickColumnCount = 9;
 const delay = 500; //delay to reset the game
@@ -72,7 +74,7 @@ for (let i = 0; i < brickColumnCount; i++) {
 function drawBall() {
   ctx.beginPath();
   ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
-  ctx.fillStyle = ball.visible ? '#c64756' : 'transparent';
+  ctx.fillStyle = ball.visible ? '#120136' : 'transparent';
   ctx.fill();
   ctx.closePath();
 }
@@ -81,7 +83,7 @@ function drawBall() {
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
-  ctx.fillStyle = paddle.visible ? '#c64756' : 'transparent';
+  ctx.fillStyle = paddle.visible ? '#120136' : 'transparent';
   ctx.fill();
   ctx.closePath();
 }
@@ -92,7 +94,7 @@ function drawBricks() {
     row.forEach((brick) => {
       ctx.beginPath();
       ctx.rect(brick.x, brick.y, brick.w, brick.h);
-      ctx.fillStyle = brick.visible ? '#c64756' : 'transparent';
+      ctx.fillStyle = brick.visible ? '#120136' : 'transparent';
       ctx.fill();
       ctx.closePath();
     });
@@ -120,12 +122,12 @@ function moveBall() {
 
   // Wall collision (right/left)
   if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
-    ball.dx *= -1; // ball.dx = ball.dx * -1
+    ball.dx = ball.dx * -1;
   }
 
   // Wall collision (top/bottom)
   if (ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
-    ball.dy *= -1;
+    ball.dy = ball.dy * -1;
   }
 
   // console.log(ball.x, ball.y);
@@ -150,10 +152,11 @@ function moveBall() {
           ball.y + ball.size > brick.y &&
           ball.y - ball.size < brick.y + brick.h
         ) {
+          playBrickCollisionSound();
           ball.dy *= -1;
           brick.visible = false;
-
           increaseScore();
+          ball.speed *= SPEED_FACTOR;
         }
       }
     }
@@ -163,9 +166,15 @@ function moveBall() {
   if (ball.y + ball.size > canvas.height) {
     showAllBricks();
     score = 0;
+    ball.speed = 4;
   }
 }
-
+function playBrickCollisionSound() {
+  const soundEl = document.querySelector(`.wrong`);
+  soundEl.pause();
+  soundEl.currentTime = 0;
+  soundEl.play();
+}
 // Increase score
 function increaseScore() {
   score++;

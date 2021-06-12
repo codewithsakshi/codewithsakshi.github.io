@@ -19,135 +19,10 @@ closeBtnEl.addEventListener('click', () => {
   gameRuleEl.classList.remove('show');
 });
 
-// let score = 0;
-// const bricksRowCount = 5;
-// const bricksColumnCount = 9;
-// const resetGameDelayMs = 500;
-
-// // create ball props
-
-// const brickInfo = {
-//   w: 70,
-//   h: 25,
-//   padding: 10,
-//   offsetX: 45,
-//   offsetY: 20,
-//   visible: true,
-// };
-
-// const bricks = [];
-
-// for (let i = 0; i < bricksColumnCount; i++) {
-//   bricks[i] = [];
-
-//   for (let j = 0; j < bricksRowCount; j++) {
-//     const x = i * (brickInfo.w + brickInfo.padding) + brickInfo.offsetX;
-//     const y = j * (brickInfo.h + brickInfo.padding) + brickInfo.offsetY;
-//     bricks[i][j] = {
-//       x: x,
-//       y: y,
-//       w: brickInfo.w,
-//       h: brickInfo.h,
-//       padding: brickInfo.padding,
-//       offsetX: brickInfo.offsetX,
-//       offsetY: brickInfo.offsetY,
-//       visible: brickInfo.visible,
-//     };
-//   }
-// }
-
-// // draw bricks on canvas
-// function drawBricks() {
-//   bricks.forEach((row) => {
-//     row.forEach((brick) => {
-//       ctx.beginPath();
-//       ctx.rect(brick.x, brick.y, brick.w, brick.h);
-//       ctx.fillStyle = brick.visible ? '#c64756' : 'transparent';
-//       ctx.fill();
-//       ctx.closePath();
-//     });
-//   });
-// }
-
-// // move paddle on canvas
-// function movePaddle() {
-//   paddle.x = paddle.x + paddle.dx;
-
-//   if (paddle.x + paddle.w > canvas.width) {
-//     paddle.x = canvas.width - paddle.w;
-//   }
-
-//   if (paddle.x < 0) {
-//     paddle.x = 0;
-//   }
-// }
-
-// // move ball on canvas
-// function moveBall() {
-//   ball.x = ball.x + ball.dx;
-//   ball.y = ball.y + ball.dy;
-
-//   // wall collision (right/left)
-//   if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
-//     ball.dx *= -1;
-//   }
-
-//   // wall collision (top/bottom)
-//   if (ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
-//     ball.dy *= -1;
-//   }
-
-//   // paddle collision
-//   if (
-//     ball.x - ball.size > paddle.x &&
-//     ball.x + ball.size < paddle.x + paddle.w &&
-//     ball.y + ball.size > paddle.y
-//   ) {
-//     ball.dy = -ball.speed;
-//   }
-
-//   // bricks collision
-//   for (let i = 0; i < bricks.length; i++) {
-//     for (let j = 0; j < bricks[i].length; j++) {
-//       const brick = bricks[i][j];
-//       if (brick.visible) {
-//         if (
-//           ball.x - ball.size > brick.x &&
-//           ball.x + ball.size < brick.x + brick.w &&
-//           ball.y + ball.size > brick.y &&
-//           ball.y - ball.size < brick.y + brick.h
-//         ) {
-//           ball.dy *= -1;
-//           brick.visible = false;
-
-//           // increaseScore();
-//         }
-//       }
-//     }
-//   }
-
-//   // hit bottom loose ball
-//   if (ball.y + ball.size > canvas.height) {
-//     showAllBricks();
-//     score = 0;
-//   }
-// }
-
-// // increase score
-
-// function showAllBricks() {
-//   for (let i = 0; i < bricks.length; i++) {
-//     for (let j = 0; j < bricks[i].length; j++) {
-//       const brick = bricks[i][j];
-//       bricks.visible = true;
-//     }
-//   }
-// }
-
 let score = 0;
 
-const brickRowCount = 9;
-const brickColumnCount = 5;
+const brickRowCount = 5;
+const brickColumnCount = 9;
 const delay = 500; //delay to reset the game
 
 // Create ball props
@@ -184,9 +59,9 @@ const brickInfo = {
 
 // Create bricks
 const bricks = [];
-for (let i = 0; i < brickRowCount; i++) {
+for (let i = 0; i < brickColumnCount; i++) {
   bricks[i] = [];
-  for (let j = 0; j < brickColumnCount; j++) {
+  for (let j = 0; j < brickRowCount; j++) {
     const x = i * (brickInfo.w + brickInfo.padding) + brickInfo.offsetX;
     const y = j * (brickInfo.h + brickInfo.padding) + brickInfo.offsetY;
     bricks[i][j] = { x, y, ...brickInfo };
@@ -211,16 +86,10 @@ function drawPaddle() {
   ctx.closePath();
 }
 
-// Draw score on canvas
-// function drawScore() {
-//   ctx.font = '20px Arial';
-//   ctx.fillText(`Score: ${score}`, canvas.width - 100, 30);
-// }
-
 // Draw bricks on canvas
 function drawBricks() {
-  bricks.forEach((column) => {
-    column.forEach((brick) => {
+  bricks.forEach((row) => {
+    row.forEach((brick) => {
       ctx.beginPath();
       ctx.rect(brick.x, brick.y, brick.w, brick.h);
       ctx.fillStyle = brick.visible ? '#c64756' : 'transparent';
@@ -271,14 +140,15 @@ function moveBall() {
   }
 
   // Brick collision
-  bricks.forEach((column) => {
-    column.forEach((brick) => {
+  for (let i = 0; i < bricks.length; i++) {
+    for (let j = 0; j < bricks[i].length; j++) {
+      const brick = bricks[i][j];
       if (brick.visible) {
         if (
-          ball.x - ball.size > brick.x && // left brick side check
-          ball.x + ball.size < brick.x + brick.w && // right brick side check
-          ball.y + ball.size > brick.y && // top brick side check
-          ball.y - ball.size < brick.y + brick.h // bottom brick side check
+          ball.x - ball.size > brick.x &&
+          ball.x + ball.size < brick.x + brick.w &&
+          ball.y + ball.size > brick.y &&
+          ball.y - ball.size < brick.y + brick.h
         ) {
           ball.dy *= -1;
           brick.visible = false;
@@ -286,10 +156,10 @@ function moveBall() {
           increaseScore();
         }
       }
-    });
-  });
+    }
+  }
 
-  // Hit bottom wall - Lose
+  // hit bottom loose ball
   if (ball.y + ball.size > canvas.height) {
     showAllBricks();
     score = 0;
@@ -321,9 +191,12 @@ function increaseScore() {
 
 // Make all bricks appear
 function showAllBricks() {
-  bricks.forEach((column) => {
-    column.forEach((brick) => (brick.visible = true));
-  });
+  for (let i = 0; i < bricks.length; i++) {
+    for (let j = 0; j < bricks[i].length; j++) {
+      const brick = bricks[i][j];
+      brick.visible = true;
+    }
+  }
 }
 
 // Draw everything

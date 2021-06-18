@@ -21,7 +21,7 @@ body {
 
 .panel {
   flex: 0.08;
-  height: 300px;
+  height: 400px;
   margin: auto;
   border-radius: 25px;
   transition: flex 0.5s;
@@ -33,13 +33,17 @@ body {
 }
 
 h3 {
+  display: none;
   position: absolute;
   color: whitesmoke;
   bottom: 15px;
   left: 8px;
   font-weight: 500;
-  max-width: 150px;
-  font-size: medium;
+  font-size: 22px;
+}
+
+.panel.active h3 {
+  display: block;
 }
 
 h3:hover {

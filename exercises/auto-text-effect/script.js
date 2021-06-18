@@ -1,7 +1,7 @@
-const textEl = document.getElementById("text");
-const speedEl = document.getElementById("speed");
+const textEl = document.getElementById('text');
+const speedEl = document.getElementById('speed');
 
-const text = "We Love Programming!";
+const text = 'We Love Programming!';
 
 let speedValue = 300 / speedEl.value;
 
@@ -19,8 +19,7 @@ function writeText() {
   setTimeout(writeText, speedValue);
 }
 
-speedEl.addEventListener("input", function (event) {
+speedEl.addEventListener('input', function (event) {
   const typedValue = event.target.value;
   speedValue = 900 / typedValue;
-  console.log(speedValue);
 });

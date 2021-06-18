@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: var(--body-bg-color);
+  /* background-color: var(--body-bg-color); */
   background-image: var(--body-bg-linear-color);
   font-family: "Lato", sans-serif;
   display: flex;

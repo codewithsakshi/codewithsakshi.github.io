@@ -58,8 +58,8 @@ function filterPosts(e) {
   const posts = document.querySelectorAll('.posts');
 
   for (let i = 0; i < posts.length; i++) {
-    const title = posts.querySelector('.post-title').inneText.toUpperCase();
-    const body = post.querySelector('.post-body').inneText.toUpperCase();
+    const title = posts.querySelector('.post-title').innerText.toUpperCase();
+    const body = post.querySelector('.post-body').innerText.toUpperCase();
 
     if (title.indexOf(term) > -1 || body.indexOf(term) > -1) {
       posts.style.display = 'flex';

@@ -1,7 +1,7 @@
-const calcScreen = document.querySelector(".calc-screen");
-const calcButtons = document.querySelectorAll(".calc-btn");
-let buffer = "0";
-let previousOperator = "";
+const calcScreen = document.querySelector('.calc-screen');
+const calcButtons = document.querySelectorAll('.calc-btn');
+let buffer = '0';
+let previousOperator = '';
 let runningTotal = 0;
 
 function handleClick(value) {
@@ -14,7 +14,7 @@ function handleClick(value) {
 }
 
 function handleNumber(value) {
-  if (buffer === "0") {
+  if (buffer === '0') {
     buffer = value;
   } else {
     buffer = buffer + value;
@@ -23,7 +23,7 @@ function handleNumber(value) {
 }
 
 function handleMath(value) {
-  if (buffer === "0") {
+  if (buffer === '0') {
     return;
   }
   const intBuffer = parseInt(buffer);
@@ -34,18 +34,18 @@ function handleMath(value) {
     flushOperation(intBuffer);
   }
   previousOperator = value;
-  buffer = "0";
+  buffer = '0';
   console.log(`will do some math with: ${value}`);
 }
 
 function flushOperation(intBuffer) {
-  if (previousOperator === "+") {
+  if (previousOperator === '+') {
     runningTotal += intBuffer;
-  } else if (previousOperator === "−") {
+  } else if (previousOperator === '−') {
     runningTotal = runningTotal - intBuffer;
-  } else if (previousOperator === "×") {
+  } else if (previousOperator === '×') {
     runningTotal = runningTotal * intBuffer;
-  } else if (previousOperator === "÷") {
+  } else if (previousOperator === '÷') {
     runningTotal = runningTotal / intBuffer;
   }
 }
@@ -53,36 +53,36 @@ function flushOperation(intBuffer) {
 function handleSymbol(value) {
   //   console.log(`Symbol:  ${value}`);
   switch (value) {
-    case "AC":
-      buffer = "0";
+    case 'AC':
+      buffer = '0';
       runningTotal = 0;
       break;
-    case "=":
-      if (previousOperator === "") {
+    case '=':
+      if (previousOperator === '') {
         return;
       }
       const intBuffer = parseInt(buffer);
       flushOperation(intBuffer);
       buffer = runningTotal;
-      previousOperator = "";
+      previousOperator = '';
       runningTotal = 0;
       break;
-    case "DEL":
+    case 'DEL':
       if (buffer.length === 1) {
-        buffer = "0";
+        buffer = '0';
       } else {
         buffer = buffer.substr(0, buffer.length - 1);
       }
       break;
-    case "+":
-    case "−":
-    case "×":
-    case "÷":
-    case ".":
+    case '+':
+    case '−':
+    case '×':
+    case '÷':
+    case '.':
       handleMath(value);
       break;
 
-    case "%":
+    case '%':
       if (buffer === 0) {
         buffer = 0;
       } else {
@@ -96,7 +96,7 @@ function refreshUI() {
 }
 
 calcButtons.forEach((calcButton) => {
-  calcButton.addEventListener("click", () => {
+  calcButton.addEventListener('click', () => {
     const value = calcButton.innerText;
     handleClick(value);
   });

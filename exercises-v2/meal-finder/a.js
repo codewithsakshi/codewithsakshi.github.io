@@ -1,12 +1,12 @@
-const searchBtnElement = document.querySelector(".search-btn");
-const inputElement = document.querySelector("#search-meal");
-const resultHeading = document.querySelector(".result-heading");
-const mealEl = document.querySelector(".meals");
-const singleMealEL = document.querySelector(".single-meal");
+const searchBtnElement = document.querySelector('.search-btn');
+const inputElement = document.querySelector('#search-meal');
+const resultHeading = document.querySelector('.result-heading');
+const mealEl = document.querySelector('.meals');
+const singleMealEL = document.querySelector('.single-meal');
 
-const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+const API_URL = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 
-searchBtnElement.addEventListener("click", function (e) {
+searchBtnElement.addEventListener('click', function (e) {
   e.preventDefault();
   const mealName = inputElement.value;
   console.log(mealName);
@@ -37,16 +37,17 @@ async function fetchMeal(mealName) {
       resultHeading.innerHTML = `<P>${mealTitle}</p>`;
 
       const mealKeys = Object.keys(meal);
+      console.log({ mealKeys });
 
       const ingredientKeys = mealKeys.filter(function (value) {
-        if (value.indexOf("Ingredient") !== -1 && meal[value] !== "") {
+        if (value.indexOf('Ingredient') !== -1 && meal[value] !== '') {
           return true;
         }
         return false;
       });
 
       const measureKeys = mealKeys.filter(function (value) {
-        if (value.indexOf("Measure") !== -1 && meal[value] !== " ") {
+        if (value.indexOf('Measure') !== -1 && meal[value] !== ' ') {
           return true;
         }
         return false;
@@ -67,8 +68,8 @@ async function fetchMeal(mealName) {
       //[{"cumin": "250 gram"}, {"haldi": "100 gram"}, {"mrichr": "300 "}, {}, {}, {}, {}, {}]
 
       const ingredientEls = result.map(function (ingredient) {
-        const liEl = document.createElement("li");
-        liEl.classList.add("ingredient-item");
+        const liEl = document.createElement('li');
+        liEl.classList.add('ingredient-item');
 
         const keys = Object.keys(ingredient); // ["cumin"]
         const ingredientName = keys[0]; // 'CUMIN'
@@ -76,12 +77,12 @@ async function fetchMeal(mealName) {
         return liEl;
       });
 
-      console.log(ingredientEls);
-      const newElement = document.createElement("div");
-      newElement.classList.add("ingredient-recipee");
+      // console.log(ingredientEls);
+      const newElement = document.createElement('div');
+      newElement.classList.add('ingredient-recipee');
 
-      const listEl = document.createElement("ul");
-      listEl.classList.add("ingredient-list");
+      const listEl = document.createElement('ul');
+      listEl.classList.add('ingredient-list');
 
       ingredientEls.forEach(function (ingredientEl) {
         listEl.appendChild(ingredientEl);

@@ -20,15 +20,14 @@ body {
 .empty {
   border: 3px solid var(--black-color);
   background-color: var(--box-color);
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin: 10px;
   border-radius: 1px;
 }
 
 .fill {
   background-image: url(./drag-bg-img);
-  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;

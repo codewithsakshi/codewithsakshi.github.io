@@ -26,14 +26,16 @@ body {
   padding-top: 1rem;
   color: #29323c;
   border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
 .main-heading {
   text-transform: capitalize;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 500;
   padding: 0.6rem;
   color: linear-gradient(to right, #434343 0%, black 100%);
+  margin-bottom: 10px;
 }
 
 .currency {
@@ -44,6 +46,11 @@ body {
 }
 .swap-rate-container {
   text-align: center;
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .swap-btn-icon {

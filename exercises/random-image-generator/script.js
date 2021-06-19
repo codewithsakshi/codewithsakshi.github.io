@@ -1,16 +1,16 @@
-const container = document.querySelector(".container");
-const unsplashURL = "https://source.unsplash.com/random/";
+const container = document.querySelector('.container');
+const unsplashURL = 'https://source.unsplash.com/random/';
 const rows = 5;
 const totalRows = rows * 3;
 
 for (let i = 0; i < totalRows; i++) {
-  const img = document.createElement("img");
+  const img = document.createElement('img');
 
   console.log({ size: getRandomSize() });
 
   const imageUrl = `${unsplashURL}${getRandomSize()}`;
 
-  console.log("Image URL is ", imageUrl);
+  console.log('Image URL is ', imageUrl);
   img.src = imageUrl;
   container.appendChild(img);
 }

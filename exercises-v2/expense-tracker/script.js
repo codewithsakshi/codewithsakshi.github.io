@@ -1,4 +1,4 @@
-const balanceEl = document.querySelector('.balance');
+const balanceEl = document.querySelector('#balance');
 const moneyPlusEl = document.querySelector('.money-plus');
 const moneyMinusEl = document.querySelector('.money-minus');
 const listElContainer = document.querySelector('.list');
@@ -8,22 +8,23 @@ const inputAmountEL = document.querySelector('#amount');
 
 formElContainer.addEventListener('submit', addTransaction);
 
-const localStorageTransactions = JSON.parse(
-  localStorage.getItem('transactions')
-);
+let transactions = [];
 
-let transactions;
-
-if (localStorage.getItem('transaction') !== null) {
-  transactions = localStorageTransactions;
-} else {
+try {
+  if (localStorage.getItem('transactions')) {
+    // null, undefined, "", [], ---> False
+    transactions = JSON.parse(localStorage.getItem('transactions'));
+    console.log({ transactions });
+  }
+} catch (error) {
   transactions = [];
 }
 
 function addTransaction(e) {
-  e.preventDefault();
+  e.preventDefault(); // Why : To Prevent default form submit behaviour
 
   if (text.value.trim() === '' || amount.value.trim() === '') {
+    // to remove whitespace
     alert('Please add a text and amount');
   } else {
     const transaction = {
@@ -38,6 +39,9 @@ function addTransaction(e) {
     updateValues();
 
     updateLocalStorage();
+
+    text.value = '';
+    amount.value = '';
   }
 }
 
@@ -65,8 +69,6 @@ function addTransactionDOM(transaction) {
     transaction.id
   })">X<button/>`;
 
-  console.log(item);
-
   if (transaction.amount < 0) {
     item.classList.add('minus');
   } else {
@@ -77,13 +79,41 @@ function addTransactionDOM(transaction) {
 }
 
 function updateValues() {
-  // balanceEl.innerHTML = `${totalMoney}Rs`;
-  // moneyPlusEl.innerHTML = `${income}Rs`;
-  // moneyMinusEl.innerHTML = `${expense}Rs`;
+  // [{id, text, amount},{id, text, amount}]
+  const amounts = transactions.map((transaction) => transaction.amount); // [100, -300, 29]
+  console.log(amounts);
+
+  // const totalMoney = amounts.reduce(
+  //   (acc, amount) => (acc = acc + Number(amount)),
+  //   0
+  // );
+
+  let totalMoney = 0;
+  for (let i = 0; i < amounts.length; i++) {
+    totalMoney = totalMoney + Number(amounts[i]);
+  }
+
+  console.log(totalMoney);
+
+  const income = amounts
+    .filter((amount) => amount > 0)
+    .reduce((acc, amount) => (acc = acc + Number(amount)), 0);
+
+  console.log({ income: income });
+
+  const expense = amounts
+    .filter((amount) => amount < 0)
+    .reduce((acc, amount) => (acc = acc + Number(amount)), 0);
+
+  console.log({ expense: expense });
+
+  balanceEl.innerHTML = `${totalMoney} /-`;
+  moneyPlusEl.innerHTML = `${income} /-`;
+  moneyMinusEl.innerHTML = `${expense} /-`;
 }
 
 function removeTransaction(id) {
-  transactions = transaction.filter((transaction) => transaction.id !== id);
+  transactions = transactions.filter((transaction) => transaction.id !== id);
 
   updateLocalStorage();
   init();

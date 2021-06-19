@@ -31,8 +31,10 @@ small {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 440px;
-  width: 300px;
+  height: 400px;
+  min-height: 85vh;
+  width: 25%;
+  min-width: 330px;
   max-width: 100%;
   margin: auto;
   cursor: pointer;

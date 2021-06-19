@@ -1,7 +1,7 @@
-const jokeEl = document.querySelector(".joke");
-const jokeBtn = document.querySelector(".joke-btn");
+const jokeEl = document.querySelector('.joke');
+const jokeBtn = document.querySelector('.joke-btn');
 
-jokeBtn.addEventListener("click", generateJoke);
+jokeBtn.addEventListener('click', generateJoke);
 
 generateJoke();
 
@@ -9,11 +9,12 @@ generateJoke();
 async function generateJoke() {
   const config = {
     headers: {
-      Accept: "application/json",
+      Accept: 'application/json',
     },
   };
 
-  const res = await fetch("https://icanhazdadjoke.com", config);
+  const res = await fetch('https://icanhazdadjoke.com', config);
+  console.log({ res });
 
   const data = await res.json();
 

@@ -22,7 +22,7 @@ body {
   transform: skew(0deg, -10deg);
   padding: 200px 0;
   text-align: center;
-  margin-top: -100px;
+  margin-top: -130px;
 }
 .content {
   transform: skew(0deg, 10deg);

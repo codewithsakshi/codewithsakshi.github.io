@@ -57,17 +57,21 @@ const data = [
   },
 ];
 
-data.forEach(createBox);
+data.forEach(createBox); // What forEach do ?
 
 // create speech boxes
 function createBox(item) {
   const box = document.createElement('div');
-  const { image, text } = item;
+  // x = 5, y = x + 3
+  // const { image, text } = item; //  {image: "./images/hurt.jpg", text: ""} // Object destructuring
+
+  const image = item.image;
+  const text = item['text'];
 
   box.classList.add('box');
 
   box.innerHTML = `<img src=${image} alt=${text}/>
-  <p class="info">${text}</p>`;
+  <p class="info">${text}</p>`; // String interpolation, template strings
 
   mainContainerEl.appendChild(box);
 

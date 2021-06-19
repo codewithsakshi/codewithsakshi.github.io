@@ -1,24 +1,22 @@
-const contents = document.querySelectorAll(".content");
-const listItems = document.querySelectorAll("nav ul li");
+const contents = document.querySelectorAll('.content');
+const listItems = document.querySelectorAll('nav ul li');
 
 listItems.forEach((item, idx) => {
-  item.addEventListener("click", () => {
+  item.addEventListener('click', () => {
     hideAllContents();
     hideAllItems();
 
-    item.classList.add("active");
-    contents[idx].classList.add("show");
+    item.classList.add('active');
+    contents[idx].classList.add('show');
   });
 });
 
 function hideAllContents() {
-  contents.forEach(function (content) {
-    content.classList.remove("show");
-  });
+  contents.forEach((content) => content.classList.remove('show'));
 }
 
 function hideAllItems() {
   listItems.forEach(function (item) {
-    item.classList.remove("active");
+    item.classList.remove('active');
   });
 }

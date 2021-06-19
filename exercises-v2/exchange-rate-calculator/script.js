@@ -1,21 +1,21 @@
-const API_URL = "https://open.exchangerate-api.com/v6/latest";
+const API_URL = 'https://open.exchangerate-api.com/v6/latest';
 
-const currencyOneElement = document.querySelector("#currency-one");
-const currencyTwoElement = document.querySelector("#currency-two");
-const amountOneElement = document.querySelector("#amount-one");
-const amountTwoElement = document.querySelector("#amount-two");
-const swapBtnElement = document.querySelector(".swap-btn");
-const rateElement = document.querySelector(".rate");
+const currencyOneElement = document.querySelector('#currency-one');
+const currencyTwoElement = document.querySelector('#currency-two');
+const amountOneElement = document.querySelector('#amount-one');
+const amountTwoElement = document.querySelector('#amount-two');
+const swapBtnElement = document.querySelector('.swap-btn');
+const rateElement = document.querySelector('.rate');
 
-swapBtnElement.addEventListener("click", swapCurrency);
+swapBtnElement.addEventListener('click', swapCurrency);
 
-currencyOneElement.addEventListener("change", calculate);
-currencyOneElement.addEventListener("input", calculate);
+currencyOneElement.addEventListener('change', calculate);
+currencyOneElement.addEventListener('input', calculate);
 
-currencyTwoElement.addEventListener("change", calculate);
-currencyTwoElement.addEventListener("input", calculate);
+currencyTwoElement.addEventListener('change', calculate);
+currencyTwoElement.addEventListener('input', calculate);
 
-amountOneElement.addEventListener("input", calculate);
+amountOneElement.addEventListener('input', calculate);
 
 function swapCurrency() {
   const temp = currencyOneElement.value;

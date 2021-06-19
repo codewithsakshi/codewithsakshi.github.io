@@ -1,18 +1,17 @@
-const button = document.querySelector(".btn");
+const button = document.querySelector('.btn');
+const toasts = document.querySelector('#toasts');
 
-const toasts = document.querySelector("#toasts");
+const messages = ['Hey Guys', 'Hello World', 'Hola!', 'Okie Dokie'];
 
-const messages = ["Hey Guys", "Hello World", "Hola!", "Okie Dokie"];
+const types = ['info', 'success', 'error'];
 
-const types = ["info", "success", "error"];
-
-button.addEventListener("click", function () {
+button.addEventListener('click', function () {
   createNotification();
 });
 
 function createNotification() {
-  const notif = document.createElement("div");
-  notif.classList.add("toast");
+  const notif = document.createElement('div');
+  notif.classList.add('toast');
   const type = getRandomType();
   const message = getRandomMessage();
   notif.classList.add(type);

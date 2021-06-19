@@ -1,20 +1,20 @@
-const boxes = document.querySelectorAll(".box");
+const boxes = document.querySelectorAll('.box');
 
-window.addEventListener("scroll", checkBoxes);
+window.addEventListener('scroll', checkBoxes);
 checkBoxes();
 
 function checkBoxes() {
-  //  console.log("Function checkboxes called")
-
   const triggerBottom = (window.innerHeight / 5) * 4;
+  console.log({ triggerBottom });
 
   for (let i = 0; i < boxes.length; i++) {
     const boxTop = boxes[i].getBoundingClientRect().top;
-    //  console.log(boxTop)
+
+    console.log({ boxTop });
     if (boxTop < triggerBottom) {
-      boxes[i].classList.add("show");
+      boxes[i].classList.add('show');
     } else {
-      boxes[i].classList.remove("show");
+      boxes[i].classList.remove('show');
     }
   }
 }

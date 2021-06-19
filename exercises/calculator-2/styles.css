@@ -12,6 +12,9 @@
   --indigo-color: indigo;
 }
 
+body {
+  overflow: hidden;
+}
 .wrapper {
   width: 65vh;
   font-family: "Open+Sans", Arial, Helvetica, sans-serif;

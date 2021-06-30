@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,500&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: #fff;
+  font-family: "Roboto";
+}
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  max-width: 100%;
+  padding: 20px;
+}
+
+.weight-container, .height-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.weight-container input,
+.height-container input {
+  width: 80px;
+  padding: 10px;
+  border-radius: 2px;
+  border: 0;
+}
+
+.calculate-btn {
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.bodyMassIndex {
+  padding: 15px;
+}
+
+.result {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.reset-btn {
+  padding:  10px 15px;
+  border: 0;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.line {
+  width: 300px;
+}
+
+.main-heading {
+  margin-top: 40px;
+  font-size: 40px;
+  letter-spacing: 2px;
+}

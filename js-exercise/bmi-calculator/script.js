@@ -30,9 +30,11 @@ calculateBtnEl.addEventListener('click', function () {
 
   if (!height) {
     resultEl.innerHTML = `<p>Please input height</p>`;
+    resultEl.classList.add('error');
   }
   if (!weight) {
     resultEl.innerHTML = `<p>please input weight</p>`;
+    resultEl.classList.add('error');
   }
 });
 

@@ -8,32 +8,41 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1 class="main-heading">Send Feedback</h1>
-    <div class="question-info"><span class="question-no">0</span>/30</div>
-    <div class="question"></div>
-    <div class="submit-btn-container">
-      <button type="submit" class="submit-btn">Submit</button>
+    <div class="main-container">
+      <h1 class="main-heading">Send Feedback</h1>
+      <div class="question-info">
+        <span class="current-no">0</span>/<span class="total-questions">0</span>
+      </div>
+      <!-- <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+      </div> -->
+      <div class="question"></div>
+
+      <div class="circle-progress-container">
+        <input type="radio" name="rating" value="1" class="radio-btn" />
+        <input type="radio" name="rating" value="2" class="radio-btn" />
+        <input type="radio" name="rating" value="3" class="radio-btn" />
+        <input type="radio" name="rating" value="4" class="radio-btn" />
+        <input type="radio" name="rating" value="5" class="radio-btn" />
+        <input type="radio" name="rating" value="6" class="radio-btn" />
+        <input type="radio" name="rating" value="7" class="radio-btn" />
+        <input type="radio" name="rating" value="8" class="radio-btn" />
+        <input type="radio" name="rating" value="9" class="radio-btn" />
+        <input type="radio" name="rating" value="10" class="radio-btn" />
+      </div>
+
+      <div class="agree-disagree">
+        <p class="disagree">Total disagree</p>
+        <p class="agree">Total agree</p>
+      </div>
+      <div class="btn-container">
+        <button class="prev-btn hide button">Previous</button>
+        <button class="next-btn button">Next</button>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+      <div class="error-msg"></div>
     </div>
-    <div class="progress-container">
-      <div class="circle active"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
-    <div class="agree-disagree">
-      <p class="disagree">Total disagree</p>
-      <p class="agree">Total agree</p>
-    </div>
-    <div class="btn-container">
-      <button class="previous-btn">Previous</button>
-      <button class="next-btn">Next</button>
-    </div>
+    <div class="submit-msg"></div>
     <script src="./script.js"></script>
   </body>
 </html>

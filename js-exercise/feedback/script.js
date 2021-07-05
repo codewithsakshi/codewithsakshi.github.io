@@ -1,192 +1,153 @@
-const progressContainerEl = document.querySelector('.progress-container');
-const circleEls = document.querySelectorAll('.circle');
-const prevBtnEl = document.querySelector('.previous-btn');
+const prevBtnEl = document.querySelector('.prev-btn');
 const nextBtnEl = document.querySelector('.next-btn');
 const questionEl = document.querySelector('.question');
 const submitBtnEl = document.querySelector('.submit-btn');
-const questionNoEl = document.querySelector('.question-no');
+
+const currentQuestionNoEl = document.querySelector('.current-no');
+const totalQuestionsEl = document.querySelector('.total-questions');
+
+const progressElement = document.querySelector('.progress-bar');
+const progressBarContainer = document.querySelector('.progress-bar-container');
+
+const radioBtns = document.querySelectorAll('.radio-btn');
+const errorMsgEl = document.querySelector('.error-msg');
+const mainContainer = document.querySelector('.main-container');
+
+const submitMsgEl = document.querySelector('.submit-msg');
 
 const questions = [
+  { id: 1, question: 'You need to know code to be a web designer.' },
   {
-    question: 'You need to know code to be a web designer.',
-  },
-  {
+    id: 2,
     question:
       'A Full Stack developer should know is called MEAN: MongoDB, Express, Angular and NodeIS.',
   },
   {
-    questions:
+    id: 3,
+    question:
       'A Full Stack developer must understand how to export data from analytical tools such as Google Analytics.',
   },
   {
+    id: 4,
     question:
       'Full Stack developers are “developer generalists” who possesses a wealth of technical knowledge.',
   },
   {
+    id: 5,
     question:
       'A Full Stack developer needs to know how to use version control tools such as GIT.',
   },
   {
+    id: 6,
     question:
       'The Full Stack Developer must be 100% up-to-date on their knowledge and skills, including how to create mobile apps.',
   },
-  {
-    question:
-      'Developers who don’t know about SQL query injections are the same developers who will leave their application databases exposed to hackers.',
-  },
-  {
-    question:
-      'JavaScript is the only programming language that can run natively in the browser and on the server-side (Node.js).',
-  },
-  {
-    question:
-      'Full Stack Developers to better collaborate and cooperate with their fellow developers/programmers who are working on the same project.',
-  },
-  {
-    question:
-      'PHP is an open-source, cross-platform compatible language that can work seamlessly on Unix, macOS, and Windows.',
-  },
-  {
-    question:
-      'Full Stack developers are equipped with multiple skills pertaining to both frontend and backend development. ',
-  },
-
-  {
-    question:
-      'No specific degree or educational path exists for careers in web development.',
-  },
-  {
-    question:
-      'It is possible to become a web developer with or without a formal education.',
-  },
-  {
-    question:
-      'Web developers are responsible for designing and developing websites and website applications.',
-  },
-  {
-    question: 'Node.js can be used for network applications.',
-  },
-  {
-    question:
-      'Node.js provides an easy way to build scalable network programs.',
-  },
-  {
-    question:
-      'A generic piece of code which runs in between several asynchronous function calls is known as control flow function.',
-  },
-  {
-    question:
-      'For async processing, Node.js was created explicitly as an experiment.',
-  },
-  {
-    question:
-      'Node.js is quickly gaining attention as it is a loop based server for JavaScript.',
-  },
-  {
-    question:
-      'To process and handle external events and to convert them into callback invocations an event loop is used.',
-  },
-  {
-    question:
-      'Callback function is used in node.js to deal with multiple requests made to the server.',
-  },
-  {
-    question:
-      'XHTML has poor browser support. Internet Explorer and other browsers cannot parse XHTML into XML.',
-  },
-  {
-    question: 'JS which is JavaScript is used to code the functionality.',
-  },
-  {
-    question:
-      'PHP or Personal Home Page which is used for server-side scripting.',
-  },
-  {
-    question:
-      'HTML is Hypertext Markup Language which is the most used language for making web pages or websites.',
-  },
-  {
-    question:
-      'Semantic HTML denotes a coding style where the tags indicate the semantics of text that is to be conveyed. ',
-  },
-  {
-    question:
-      'The term DOCTYPE conveys to the browser what type of HTML must be used on a web page.',
-  },
-  {
-    question:
-      'Standard mode is a consistent mode of display used across all browsers.',
-  },
-  {
-    question:
-      'This external CSS with the elements must have the relevant extensions such as style.css.',
-  },
-  {
-    question: 'It is necessary for a web developer to learn web designing.',
-  },
 ];
 
-let currentActive = 1;
-questionNoEl.innerHTML = 0;
+const responses = [];
+
+let activeIndex = 0;
+const totalQuestions = questions.length;
+let selectedRating = undefined;
+let errorMessage = 'You need to select a rating to move further';
+
+function updateRating(questionId, rating) {
+  const responseIndex = responses.findIndex(
+    (response) => response.id === questionId
+  );
+  if (responseIndex === -1) {
+    responses.push({ id: questionId, rating: rating });
+  } else {
+    responses[responseIndex].rating = rating;
+  }
+}
+
+function getRating(questionId) {
+  const responseIndex = responses.findIndex(
+    (response) => response.id === questionId
+  );
+  if (responseIndex === -1) {
+    return null;
+  }
+  return responses[responseIndex].rating;
+}
+
+function setRadioOptions(value) {
+  if (!value) {
+    radioBtns.forEach((radioBtn) => {
+      radioBtn.checked = false;
+    });
+  } else {
+    radioBtns.forEach((radioBtn) => {
+      if (radioBtn.value === value) {
+        radioBtn.checked = true;
+      }
+    });
+  }
+}
 
 nextBtnEl.addEventListener('click', () => {
-  currentActive++;
-
-  if (currentActive > circleEls.length) {
-    currentActive = circleEls.length;
+  const questionId = questions[activeIndex];
+  const existingRating = getRating(questionId);
+  if (!selectedRating && !existingRating) {
+    errorMsgEl.innerHTML = errorMessage;
+    return;
   }
 
-  update();
-});
-
-prevBtnEl.addEventListener('click', () => {
-  currentActive--;
-
-  if (currentActive < circleEls.length) {
-    currentActive = 1;
+  errorMsgEl.innerHTML = '';
+  if (selectedRating) {
+    updateRating(questionId, selectedRating);
+    selectedRating = undefined;
   }
-
-  update();
-});
-
-function update() {
-  circleEls.forEach((circleEl, idx) => {
-    if (idx < currentActive) {
-      circleEl.classList.add('active');
-    } else {
-      circleEl.classList.remove('active');
-    }
-  });
-
-  const actives = document.querySelectorAll('.active');
-
-  if (currentActive === 1) {
-    prev.disabled = true;
-  } else if (currentActive === circles.length) {
-    next.disabled = true;
+  setRadioOptions();
+  if (activeIndex < totalQuestions - 1) {
+    activeIndex++;
+    updateUI();
   } else {
-    prev.disabled = false;
-    next.disabled = false;
+    nextBtnEl.classList.add('hide');
+    submitBtnEl.classList.add('show');
+  }
+});
+
+radioBtns.forEach((radioBtn) => {
+  radioBtn.addEventListener('click', (e) => {
+    // console.log(e.target.value);
+    selectedRating = e.target.value;
+  });
+});
+prevBtnEl.addEventListener('click', () => {
+  if (activeIndex > 0) {
+    activeIndex--;
+    updateUI();
+  }
+});
+
+function updateUI() {
+  console.log(responses);
+  const questionId = questions[activeIndex];
+  const rating = getRating(questionId);
+  if (rating) {
+    setRadioOptions(rating);
+  }
+  currentQuestionNoEl.innerHTML = activeIndex + 1;
+  const currentQuestion = questions[activeIndex];
+  questionEl.innerText = currentQuestion.question;
+  if (activeIndex === 0) {
+    prevBtnEl.classList.add('hide');
+  }
+  if (activeIndex > 0) {
+    prevBtnEl.classList.remove('hide');
   }
 }
 
-let currentQuestionIndex = 0;
-loadQuestion();
-
-function loadQuestion() {
-  const currentQuestion = questions[currentQuestionIndex];
-
-  questionEl.innerText = currentQuestion.question;
+function init() {
+  totalQuestionsEl.innerHTML = totalQuestions;
+  updateUI();
 }
+
+init();
 
 submitBtnEl.addEventListener('click', () => {
-  currentQuestionIndex++;
-  questionNoEl.innerHTML++;
-
-  if (currentQuestionIndex < questions.length) {
-    loadQuestion();
-  } else {
-    questionEl.innerHTML = `<p>Congratulations ! You have send feedback of all the questions</p>`;
-    submitBtnEl.disabled = true;
-  }
+  mainContainer.classList.add('hide');
+  submitMsgEl.innerHTML = 'Your feedback send successfully';
 });

@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h3>Banking App</h3>
-    <pre>
-        * Press 1 to create your account
-        * Press 2 to deposit money
-        * Press 3 to withdraw money
-        * Press 4 to see your balance
-        * press 9 to quit
-    </pre>
-    <button class="ask-choice" onclick="askChoice()">Ask Choice</button>
-    <hr>
-    <div class="container">
-        <h3>Available accounts</h3>
-        <div class="available-accounts"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking App</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./home.html" />
+
+  </head>
+  <body>
+    
+    <div class="form-container">
+      <h1>Open Bank Account</h1>
+      <form id="form">
+        <input
+          type="text"
+          placeholder="First name"
+          value=""
+          id="first-name"
+          name="firstName"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Last name"
+          value=""
+          id="last-name"
+          name="lastName"
+          required
+        />
+        <input type="email" placeholder="Email" value="" id="email" name="email" required />
+        <button class="signup-btn" type="submit">Sign up</button>
+        
+      </form>
+      <div class="result"></div>
     </div>
-    <div id='result'></div>
-    <div id="errorMessage"></div>
+    <hr />
+  </div>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

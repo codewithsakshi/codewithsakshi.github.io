@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --btn-color: #EE9BA3;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  color: #748194;
+}
+
+body {
+  font-family: "Roboto Condensed";
+  background-color:#FAF3EC;
+}
+
+.form-container {
+  max-width: 380px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 15px;
+  height: 550px;
+  max-height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container.hide {
+  display: none;
+}
+
+#form {
+margin-top: 4rem;
+}
+
+.form-container input {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 12px;
+  background-color: #EFEFEF;
+  border: 0;
+  font-size: 17px;
+}
+
+::-webkit-input-placeholder {
+  color: #748194;
+}
+
+.signup-btn {
+  display: block;
+  width: 300px;
+  margin: auto;
+  background-color: var(--btn-color);
+  color: #fff;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+background-color: #F38BA0;
+}
+
+.signup-btn:active {
+  transform: scale(0.99);
+}
+
+.deposit-btn, 
+.withdrawn-btn {
+  width: 120px;
+  padding: 10px 0;
+  background-color: maroon;
+  opacity: 0.9;
+  border-radius: 5px;
+  color: #fff;
+  border: 0;
+  display: block;
+  margin: 20px;
+}
+
+.deposit-btn:active, 
+.withdrawn-btn:active {
+  transform: scale(0.98);
+}
+
+/* .deposit-btn.show, 
+.withdrawn-btn.show {
+  display: block;
+} */
+
+.btn-container button:hover {
+  opacity: 1;
+}
+
+.btn-container button:active {
+  transform: scale(0.98);
+}
+
+.modal-form {
+  width: 300px;
+  margin: auto;
+  height: 200px;
+  border-radius: 15px;
+  padding: 30px;
+  background-color: white;
+  display: none;
+} 
+
+.modal-form input {
+  padding: 13px;
+  border: 0;
+  display: block;
+  border-radius: 5px;
+  background-color: #EFEFEF;
+  margin: auto;
+  cursor: pointer;
+}
+
+.submit-btn{
+  width: 190px;
+  padding: 13px;
+  border: 0;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 30px;
+  display: block;
+  background-color: var(--btn-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+} 
+
+
+.modal-form.show {
+  display: block;
+} 
+
+.result {
+  padding: 30px;
+  text-align: center;
+}
+
+.final-message {
+  text-align: center;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+
+  body {
+  background-color: #fff;
+  }
+}
+

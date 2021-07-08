@@ -57,22 +57,22 @@ function updateLocalStorage() {
   localStorage.setItem('accounts', JSON.stringify(accounts));
 }
 
-// formEl.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   const formData = new FormData(formEl);
-//   const data = Object.fromEntries(formData);
+formEl.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const formData = new FormData(formEl);
+  const data = Object.fromEntries(formData);
 
-//   const { firstName, lastName, email } = data;
-//   console.log({ firstName, lastName, email });
+  const { firstName, lastName, email } = data;
+  console.log({ firstName, lastName, email });
 
-//   account = new CreateAccount(firstName, lastName, email);
-//   accounts.push(account);
-//   updateLocalStorage();
-//   resultElement.innerHTML = `Account created successfully. Redirecting to home page`;
-//   setTimeout(() => {
-//     window.location.href = '/exercises-v2/banking-app/home.html';
-//   }, 2000);
-// });
+  account = new CreateAccount(firstName, lastName, email);
+  accounts.push(account);
+  updateLocalStorage();
+  resultElement.innerHTML = `Account created successfully. Redirecting to home page`;
+  setTimeout(() => {
+    window.location.href = '/exercises-v2/banking-app/home.html';
+  }, 2000);
+});
 
 depositBtnEl.addEventListener('click', () => {
   modalFormEl.classList.add('show');

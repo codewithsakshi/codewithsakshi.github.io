@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Leaderboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form id="form">
+      <h1 class="player-leaderboard">Player Leaderboard</h1>
+      <input
+        type="text"
+        name="firstName"
+        placeholder="First Name"
+        required
+        class="input"
+      />
+      <input
+        type="text"
+        name="lastName"
+        placeholder="Last Name"
+        required
+        class="input"
+      />
+      <select id="country" name="country" required class="input">
+        <option value="Country" disabled>Country</option>
+        <option value="Afganistan">Afghanistan</option>
+        <option value="Albania">Albania</option>
+        <option value="Algeria">Algeria</option>
+        <option value="American Samoa">American Samoa</option>
+        <option value="Syria">Syria</option>
+        <option value="Angola">Angola</option>
+        <option value="Shrilanka">Shrilanka</option>
+        <option value="Myanmar">Myanmar</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Armenia">Armenia</option>
+        <option value="Iraq">Iraq</option>
+        <option value="Australia">Australia</option>
+        <option value="China">China</option>
+        <option value="Russia">Russia</option>
+        <option value="USA">Bahamas</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="France">France</option>
+        <option value="India">India</option>
+      </select>
+      <input
+        type="number"
+        name="score"
+        placeholder="Player score"
+        required
+        class="input"
+      />
+      <button class="addPlayer-btn" type="submit">Add Player</button>
+    </form>
+    <div class="leaderboard-container"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>

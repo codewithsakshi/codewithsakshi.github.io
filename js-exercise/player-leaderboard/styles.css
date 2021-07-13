@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto Condensed";
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-leaderboard {
+ text-align: center;
+}
+
+#form {
+  margin: 0 auto;
+  border-radius: 3px;
+  padding: 20px 0;
+
+}
+
+#form input, select {
+  margin: 20px 3px;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 3px;
+  width: 150px;
+  border: 0;
+  /* background-color: #EDF6E5; */
+}
+ 
+#form button {
+  margin: 20px 3px;
+  width: 150px;
+  border-radius: 3px;
+  padding: 9px;
+  border: 0;
+  cursor: pointer;
+  background-color: #D83A56;
+  /* background-color: #DF5E5E; */
+  color: #fff;
+  opacity: 0.9;
+}
+
+#form button:focus {
+  transform: scale(1.02); 
+}
+
+#form button:hover {
+opacity: 1;
+}
+
+table tr {
+  /* background-color: #474747; */
+  width: 85%;
+  margin: auto;
+ text-align: center;
+}
+
+table tr td {
+padding: 15px;
+font-size: 20px;
+width: 170px;
+/* color: #fff; */
+}
+
+
+table tr td:nth-child(4),
+table tr td:nth-child(5),
+table tr td:nth-child(6) {
+ background-color: #fff;
+ width: 55px;
+ padding: 0;
+ border-radius: 50%;
+ margin: 30px;
+ color: black;
+ transform: scale(0.8);
+ cursor: pointer;
+}
+
+table tr td:nth-child(4):hover,
+table tr td:nth-child(5):hover,
+table tr td:nth-child(6):hover{
+  background-color: #FF616D;
+}
+
+table tr td:nth-child(4):focus,
+table tr td:nth-child(5):focus,
+table tr td:nth-child(6):focus {
+transform: scale(0.9);
+}

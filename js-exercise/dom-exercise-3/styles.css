@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.header {
+  width: 70%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.header p {
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: auto;
+}
+
+.keywords-container {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.keywords-container li {
+  border-radius: 20px;
+  font-size: 15px;
+}

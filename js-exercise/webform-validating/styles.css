@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --color-darkblue: #1b1b32;
+}
+
+body {
+  font-family: "Noto Sans KR";
+  background-color: #EDF6E5;
+  color: #fff;
+ }
+
+
+
+.main-heading {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+  
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+}
+
+#form {
+  max-width: 460px;
+  margin: auto;
+  background-color: var(--color-darkblue);
+  box-shadow:  3px 5px 3px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+input, label {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+}
+
+label {
+  margin-top: 30px;
+}
+
+.submit-btn {
+  padding: 10px;
+  width: 100%;
+  margin: 40px auto 0;
+  display: block;
+  border: 0;
+  border-radius: 5px; 
+  background-color: #ED8E7C;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+.submit-btn:focus {
+  transform: scale(0.99);
+}
+
+.submit-btn:hover {
+  opacity: 1;
+}
+
+/* .form-control.error input {
+  border-color: var(--error-color);
+} */
+
+.form-control {
+  position: relative;
+}
+
+.error-message {
+  color: var(--error-color);
+  position: absolute;
+}
+
+
+.container  {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+
+.container .form-control {
+  flex: 1;  
+}
+
+#first-name {
+  margin-right: 10px;
+} 
+
+#last-name {
+  margin-left: 10px;
+  width: 95%;
+} 
+
+.last-name {
+  margin-left: 10px; 
+}

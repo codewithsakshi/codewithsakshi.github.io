@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- <h1 class="main-heading">Student Login Form</h1> -->
+    <form id="form">
+      <div class="container">
+        <div class="form-control">
+          <label for="first-name" id="firstName">First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            id="first-name"
+            placeholder="Enter first Name"
+          />
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-control">
+          <label for="last-name" class="last-name">Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            id="last-name"
+            placeholder="Enter last Name"
+          />
+          <small class="error-message"></small>
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter a valid email" />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="text" name="password" placeholder="Enter password" />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-control">
+        <label for="phone-no">Phone number</label>
+        <input
+          type="no"
+          name="phoneNo"
+          placeholder="Enter valid phone number"
+        />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-control">
+        <label for="bio">Bio</label>
+        <input type="text" name="bio" placeholder="Enter your bio" />
+        <small class="error-message"></small>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>

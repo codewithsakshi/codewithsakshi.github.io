@@ -10,7 +10,7 @@ body {
 
 .main-heading {
   font-size: 80px;
-  color: #776e65;
+  color: #362222;
   line-height: 0;
   text-align: center;
 }
@@ -21,12 +21,6 @@ body {
   margin: auto;
 }
 
-.info {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* margin-bottom: 20px; */
-}
 
 .grid {
  display: flex;
@@ -60,8 +54,9 @@ body {
   width: 70px;
   height: 60px;
   border-radius: 3px;
-  background-color: #FF3D68;
+  background-color: #362222;
   color: #FFFFFF;
+  padding: 5px;
 }
 
 #score {
@@ -70,4 +65,9 @@ body {
 
 .score-title {
   font-size: 16px;
+}
+
+.result {
+  position: absolute;
+  left: 50%;
 }

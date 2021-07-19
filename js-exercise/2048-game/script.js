@@ -1,35 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
   const gridDisplayEl = document.querySelector('.grid');
-  const scoreDisplayEl = document.querySelector('#score');
-  const resultDisplayEl = document.querySelector('#result');
-
+  const scoreDisplayEl = document.getElementById('score');
+  const resultDisplayEl = document.getElementById('result');
   let squares = [];
   const width = 4;
   let score = 0;
 
+  //create the playing board
   function createBoard() {
     for (let i = 0; i < width * width; i++) {
-      const square = document.createElement('div');
+      square = document.createElement('div');
       square.innerHTML = 0;
-
       gridDisplayEl.appendChild(square);
       squares.push(square);
     }
-    // console.log(squares);
-    generateNo();
-    generateNo();
+    generate();
+    generate();
   }
   createBoard();
 
-  function generateNo() {
-    const randomNumber = Math.floor(Math.random() * squares.length);
-
+  //generate a new number
+  function generate() {
+    randomNumber = Math.floor(Math.random() * squares.length);
     if (squares[randomNumber].innerHTML == 0) {
       squares[randomNumber].innerHTML = 2;
-      // checkForGameOver();
-    } else {
-      generateNo();
-    }
+      checkForGameOver();
+    } else generate();
   }
 
   function moveRight() {
@@ -39,17 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
         let totalTwo = squares[i + 1].innerHTML;
         let totalThree = squares[i + 2].innerHTML;
         let totalFour = squares[i + 3].innerHTML;
-        let row = [+totalOne, +totalTwo, +totalThree, +totalFour];
-        // console.log('row::', row);
-
+        let row = [
+          parseInt(totalOne),
+          parseInt(totalTwo),
+          parseInt(totalThree),
+          parseInt(totalFour),
+        ];
         let filteredRow = row.filter((num) => num);
-        // console.log('filteredRow::', filteredRow);
         let missing = 4 - filteredRow.length;
         let zeroes = Array(missing).fill(0);
 
-        // console.log('zeroes::', zeroes);
         let newRow = zeroes.concat(filteredRow);
-        // console.log('newRow', newRow);
         squares[i].innerHTML = newRow[0];
         squares[i + 1].innerHTML = newRow[1];
         squares[i + 2].innerHTML = newRow[2];
@@ -66,16 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let totalThree = squares[i + 2].innerHTML;
         let totalFour = squares[i + 3].innerHTML;
         let row = [+totalOne, +totalTwo, +totalThree, +totalFour];
-        // console.log('row::', row);
 
         let filteredRow = row.filter((num) => num);
-        // console.log('filteredRow::', filteredRow);
         let missing = 4 - filteredRow.length;
         let zeroes = Array(missing).fill(0);
 
-        // console.log('zeroes::', zeroes);
         let newRow = filteredRow.concat(zeroes);
-        // console.log('newRow', newRow);
         squares[i].innerHTML = newRow[0];
         squares[i + 1].innerHTML = newRow[1];
         squares[i + 2].innerHTML = newRow[2];
@@ -84,22 +76,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function combinedRow() {
-    for (let i = 0; i < 15; i++) {
-      if (squares[i].innerHTML === squares[i + 1].innerHTML) {
-        let combinedTotal =
-          parseInt(squares[i].innerHTML) + parseInt(squares[i + 1].innerHTML);
-        squares[i].innerHTML = combinedTotal;
-        squares[i + 1].innerHTML = 0;
+  function moveUp() {
+    for (let i = 0; i < 4; i++) {
+      let totalOne = squares[i].innerHTML;
+      let totalTwo = squares[i + width].innerHTML;
+      let totalThree = squares[i + width * 2].innerHTML;
+      let totalFour = squares[i + width * 3].innerHTML;
+      let column = [
+        parseInt(totalOne),
+        parseInt(totalTwo),
+        parseInt(totalThree),
+        parseInt(totalFour),
+      ];
 
-        score = score + combinedTotal;
-        scoreDisplayEl.innerHTML = score;
-      }
+      let filteredColumn = column.filter((num) => num);
+      let missing = 4 - filteredColumn.length;
+      let zeros = Array(missing).fill(0);
+      let newColumn = filteredColumn.concat(zeros);
+
+      squares[i].innerHTML = newColumn[0];
+      squares[i + width].innerHTML = newColumn[1];
+      squares[i + width * 2].innerHTML = newColumn[2];
+      squares[i + width * 3].innerHTML = newColumn[3];
     }
-    checkForWin();
   }
 
-  function moveUp() {
+  function moveDown() {
+    console.log('called');
     for (let i = 0; i < 4; i++) {
       let totalOne = squares[i].innerHTML;
       let totalTwo = squares[i + width].innerHTML;
@@ -119,42 +122,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function moveDown() {
-    for (let i = 0; i < 4; i++) {
-      let totalOne = squares[i].innerHTML;
-      let totalTwo = squares[i + width].innerHTML;
-      let totalThree = squares[i + width * 2].innerHTML;
-      let totalFour = squares[i + width * 3].innerHTML;
-      let column = [+totalOne, +totalTwo, +totalThree, +totalFour];
-
-      let filteredColumn = column.filter((num) => num);
-      let missing = 4 - filteredColumn.length;
-      let zeroes = Array(missing).fill(0);
-      let newColumn = filteredColumn.concat(zeroes);
-
-      squares[i].innerHTML = newColumn[0];
-      squares[i + width].innerHTML = newColumn[1];
-      squares[i + width * 2].innerHTML = newColumn[2];
-      squares[i + width * 3].innerHTML = newColumn[3];
-    }
-  }
-
-  function combinedColumn() {
-    for (let i = 0; i < 12; i++) {
+  function combineRow() {
+    for (let i = 0; i < 15; i++) {
       if (squares[i].innerHTML === squares[i + 1].innerHTML) {
         let combinedTotal =
           parseInt(squares[i].innerHTML) + parseInt(squares[i + 1].innerHTML);
         squares[i].innerHTML = combinedTotal;
         squares[i + 1].innerHTML = 0;
-
-        score = score + combinedTotal;
+        score += combinedTotal;
         scoreDisplayEl.innerHTML = score;
       }
     }
     checkForWin();
   }
 
-  document.addEventListener('keyup', controlKey);
+  function combineColumn() {
+    for (let i = 0; i < 12; i++) {
+      if (squares[i].innerHTML === squares[i + width].innerHTML) {
+        let combinedTotal =
+          parseInt(squares[i].innerHTML) +
+          parseInt(squares[i + width].innerHTML);
+        squares[i].innerHTML = combinedTotal;
+        squares[i + width].innerHTML = 0;
+        score += combinedTotal;
+        scoreDisplayEl.innerHTML = score;
+      }
+    }
+    checkForWin();
+  }
 
   function controlKey(e) {
     if (e.keyCode === 37) {
@@ -168,61 +163,63 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  document.addEventListener('keyup', controlKey);
+
   function keyRight() {
     moveRight();
-    combinedRow();
+    combineRow();
     moveRight();
     generateNo();
   }
 
   function keyLeft() {
     moveLeft();
-    combinedRow();
+    combineRow();
     moveLeft();
     generateNo();
   }
 
   function keyUp() {
     moveUp();
-    combinedColumn();
+    combineColumn();
     moveUp();
-    generateNo();
+    generate();
   }
 
   function keyDown() {
     moveDown();
-    combinedColumn();
+    combineColumn();
     moveDown();
-    combinedColumn();
+    generate();
   }
 
-  // check for win
+  //check for the number 2048 in the squares to win
   function checkForWin() {
     for (let i = 0; i < squares.length; i++) {
-      if (+squares[i].innerHTML === 2048) {
-        resultDisplayEl.innerHTML = 'You Win';
+      if (squares[i].innerHTML == 2048) {
+        resultDisplayEl.innerHTML = 'You WIN';
         document.removeEventListener('keyup', controlKey);
         setTimeout(() => clear(), 3000);
       }
     }
   }
 
-  // check for game over
-
+  //check if there are no zeros on the board to lose
   function checkForGameOver() {
-    let zeroes = 0;
-    for (let i = 0; i < square.length; i++) {
-      if (+squares[i].innerHTML === 0) {
-        zeroes++;
+    let zeros = 0;
+    for (let i = 0; i < squares.length; i++) {
+      if (squares[i].innerHTML == 0) {
+        zeros++;
       }
     }
-    if (zeroes === 0) {
-      resultDisplayEl.innerHTML = 'You Lose';
-      document.removeEventListener('keyup', control);
+    if (zeros === 0) {
+      resultDisplayEl.innerHTML = 'You LOSE';
+      document.removeEventListener('keyup', controlKey);
       setTimeout(() => clear(), 3000);
     }
   }
 
+  //clear timer
   function clear() {
     clearInterval(myTimer);
   }
@@ -236,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (squares[i].innerHTML == 4)
         squares[i].style.backgroundColor = '#FF3F00';
       else if (squares[i].innerHTML == 8)
-        squares[i].style.backgroundColor = '#50CB93';
+        squares[i].style.backgroundColor = '#0A1931';
       else if (squares[i].innerHTML == 16)
         squares[i].style.backgroundColor = '#0F044C';
       else if (squares[i].innerHTML == 32)
@@ -246,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (squares[i].innerHTML == 128)
         squares[i].style.backgroundColor = '#2C2E43';
       else if (squares[i].innerHTML == 256)
-        squares[i].style.backgroundColor = '#FCD8D4';
+        squares[i].style.backgroundColor = '#053742';
       else if (squares[i].innerHTML == 512)
         squares[i].style.backgroundColor = '#F38BA0';
       else if (squares[i].innerHTML == 1024)
@@ -257,5 +254,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   addColours();
 
-  let myTimer = setInterval(addColours, 50);
+  var myTimer = setInterval(addColours, 50);
 });

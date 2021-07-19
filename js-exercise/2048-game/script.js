@@ -169,14 +169,14 @@ document.addEventListener('DOMContentLoaded', () => {
     moveRight();
     combineRow();
     moveRight();
-    generateNo();
+    generate();
   }
 
   function keyLeft() {
     moveLeft();
     combineRow();
     moveLeft();
-    generateNo();
+    generate();
   }
 
   function keyUp() {

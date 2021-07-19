@@ -13,12 +13,13 @@ body {
   color: #362222;
   line-height: 0;
   text-align: center;
+  margin-right: 30px;
 }
 
 .container {
   width: 500px;
   max-width: 100vw;
-  margin: auto;
+  margin: auto 0;
 }
 
 
@@ -30,7 +31,7 @@ body {
  background-color: #171010;
  border: 5px solid #171010;
  border-radius: 6px;
- margin-top: 20px;
+ margin-top: 80px;
 }
 
 .grid div {
@@ -67,7 +68,3 @@ body {
   font-size: 16px;
 }
 
-.result {
-  position: absolute;
-  left: 50%;
-}

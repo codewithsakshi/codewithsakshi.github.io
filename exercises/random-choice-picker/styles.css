@@ -12,7 +12,7 @@
 
 body {
   font-family: "Mulish", Arial, Helvetica, sans-serif;
-  background-color: var(--body-bg-color);
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,8 +22,14 @@ body {
   font-size: 17px;
 }
 
+.heading{
+  text-align: center;
+  font-size: 25px;
+}
+
 .container {
   width: 50%;
+  min-width: 400px;
   margin: auto;
 }
 
@@ -31,22 +37,20 @@ body {
   border: none;
   width: 100%;
   height: 100%;
-  padding: 30px 0;
-  font-size: 16px;
+  padding: 30px;
+  font-size: 18px;
   font-family: inherit;
   margin-top: 20px;
   text-align: initial;
-  /* display: block;
-  align-items: initial;
-  justify-content: initial; */
-}
+ }
 
 #tags {
   text-align: left;
 }
 
 .tag {
-  background-color: var(--tag-color);
+  /* background-color: var(--tag-color); */
+  background-color: #753422;
   border-radius: 50px;
   padding: 10px 20px;
   margin: 10px 5px 10px 0;

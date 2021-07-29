@@ -8,11 +8,11 @@ const holdTime = totalTimeMilliSec / 5;
 breatheAnimation();
 
 function breatheAnimation() {
-  textEl.innerText = 'Breathe In !';
+  textEl.innerText = 'Breathe In!';
   container.className = 'container grow';
 
   setTimeout(() => {
-    textEl.innerText = 'hold';
+    textEl.innerText = 'Hold';
 
     setTimeout(() => {
       textEl.innerText = 'Breathe Out!';
@@ -20,4 +20,4 @@ function breatheAnimation() {
     }, holdTime);
   }, breatheTime);
 }
-setInterval(breatheAnimation, totalTime);
+setInterval(breatheAnimation, totalTimeMilliSec);

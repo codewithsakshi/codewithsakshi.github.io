@@ -25,6 +25,25 @@ body {
   color: #161616;
 }
 
+.question {  
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 30px;
+  font-weight: 800;
+  min-height: 170px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.question-info {
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .agree-disagree {
   display: flex;
   justify-content: space-between;
@@ -33,7 +52,7 @@ body {
   font-weight: 500;
 }
 
-.progress-container {
+.circle-progress-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +62,7 @@ body {
   margin-top: 3rem;
 }
 
-.progress-container::before {
+.circle-progress-container::before {
   content: "";
   background-color: #fff;
   position: absolute;
@@ -52,23 +71,15 @@ body {
   z-index: -1;
 }
 
-.circle {
-  border-radius: 50%;
-  background-color: #fff;
-  width: 20px;
-  height: 20px;
-}
-
-.circle.active {
-  background-color: #333;
-  border: 0;
+.radio-btn {
+  width: 25px;
+  height: 25px;
 }
 
 .btn-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
-}
+  margin-top: 1rem;
+  position: relative;
+ }
 
 button {
   width: 200px;
@@ -81,6 +92,33 @@ button {
   cursor: pointer;
 }
 
+.prev-btn.hide {
+  display: none;
+}
+.next-btn.hide {
+  display: none;
+}
+
+.prev-btn {
+  position: absolute;
+  left: 0;
+}
+
+.next-btn {
+  position: absolute;
+  right: 0;
+}
+
+.submit-btn {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+
+.submit-btn.show {
+  display: block;
+}
+
 button:hover {
   background-color: #e0e0e0;
 }
@@ -89,29 +127,41 @@ button:active {
   transform: scale(0.99);
 }
 
-.submit-btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-top: 40px; */
-}
 
-.question {  
-  font-size: 1.7rem;
-  text-align: center;
-  padding: 30px;
-  font-weight: 800;
-  min-height: 170px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.question-info {
-  font-size: 2rem;
-  font-weight: 800;
+.error-msg {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  bottom: 15%;
+  left: 35%;
+  font-size: 20px;
+  color: red;
+}
+
+.progress-bar-container {
+  width: 200px;
+  height: 15px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.progress-bar {
+  /* width: 100%; */
+  height: 100%;
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.submit-msg {
+  position: absolute;
+  left: 35%;
+  bottom: 50%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.main-container.hide {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {

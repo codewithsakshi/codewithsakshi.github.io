@@ -69,9 +69,6 @@ h2 {
   border-radius: 2px;
 }
 
-.meal-area {
-  font-size: 1.5rem;
-}
 
 .ingredient-list {
   margin-top: 2rem;
@@ -79,6 +76,7 @@ h2 {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  max-width: 500px;
 }
 
 .ingredient-item {
@@ -94,9 +92,23 @@ h2 {
 .meals {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 100px;
 }
 
 .meal-recipee {
   font-size: 1rem;
+}
+
+.ingredient-recipee{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.meal-recipee{
+  max-width: 500px;
+  margin-top: 30px;
 }

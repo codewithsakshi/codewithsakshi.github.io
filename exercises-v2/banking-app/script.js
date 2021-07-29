@@ -74,33 +74,18 @@ formEl.addEventListener('submit', (e) => {
   }, 2000);
 });
 
-depositBtnEl.addEventListener('click', () => {
-  modalFormEl.classList.add('show');
-  submitBtnEl.innerHTML = 'Add';
-});
-
-withdrawnBtnEl.addEventListener('click', (e) => {
-  modalFormEl.classList.add('show');
-  submitBtnEl.innerHTML = 'Withdraw';
-});
-
-// const cashWithdrawnBtnEl = document.querySelector('.cash-withdrawn');
-// const addAmountBtnEl = document.querySelector('.add-amount');
-
-// cashWithdrawnBtnEl.addEventListener('click', () => {
-//   console.log('i clicked');
-//   console.log('amount withdrawn');
-//   messageEl.innerHTML = `collect your cash, your amount withdrawn successfully`;
+// depositBtnEl.addEventListener('click', () => {
+//   modalFormEl.classList.add('show');
+//   submitBtnEl.innerHTML = 'Add';
 // });
 
-// addAmountBtnEl.addEventListener('click', () => {
-//   console.log('i clicked');
-//   console.log('amount withdrawn');
-//   messageEl.innerHTML = `your amount deposit successfully`;
+// withdrawnBtnEl.addEventListener('click', () => {
+//   modalFormEl.classList.add('show');
+//   submitBtnEl.innerHTML = 'Withdraw';
 // });
 
-modalFormEl.addEventListener('submit', (e) => {
-  modalFormEl.classList.remove('show');
-  e.preventDefault();
-  messageEl.innerHTML = `your transaction succesed`;
-});
+// modalFormEl.addEventListener('submit', (e) => {
+//   modalFormEl.classList.remove('show');
+//   e.preventDefault();
+//   messageEl.innerHTML = `your transaction succesed`;
+// });

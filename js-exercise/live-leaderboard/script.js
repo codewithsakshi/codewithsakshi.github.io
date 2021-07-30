@@ -1,4 +1,5 @@
 const dataEl = document.querySelector('.data');
+const clockEl = document.querySelector('.clock');
 
 const users = [
   {
@@ -64,3 +65,11 @@ function updateUI() {
   });
 }
 setInterval(updateViews, 2000);
+
+function showTime() {
+  const time = new Date().toLocaleTimeString();
+  clockEl.innerText = time;
+}
+
+showTime();
+setInterval('showTime()', 1000);

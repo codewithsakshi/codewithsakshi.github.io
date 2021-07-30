@@ -18,24 +18,21 @@ body {
   background-color: var(--body-bg-color);
   color: var(--grey-color);
   font-family: "Poppins", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
 }
 
 h1 {
   color: var(--h1-color);
   font-size: 10rem;
-  opacity: 0.4;
+  opacity: 0.6;
   text-align: center;
 }
 
 form {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 100%;
-  width: 37%;
+  width: 40%;
+  margin: auto;
   margin-top: 4rem;
 }
 
@@ -45,14 +42,13 @@ form {
   color: var(--grey-color);
   border: none;
   width: 100%;
-  /* background-color: var(--white-color); */
 }
 
 .input::placeholder {
   color: var(--placeholder-color);
 }
 
-.input:focus {
+.input:focus{
   outline: var(--h1-color);
 }
 
@@ -75,10 +71,10 @@ form {
 }
 
 p {
-  color: var(--para-color);
+  color: var(--h1-color);
   margin-top: 3rem;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 500px) {

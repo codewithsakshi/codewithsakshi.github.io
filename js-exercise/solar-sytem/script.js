@@ -8,9 +8,13 @@ formEl.addEventListener('submit', (e) => {
   const formData = new FormData(formEl);
   const data = Object.fromEntries(formData);
 
-  const { mass, planet } = data;
+  const { weight, planet } = data;
+  if (!weight || !planet) {
+    console.log('Show error message here');
+  } else {
+    calculateWeight(planet, weight);
+  }
 
-  calculateWeight(planet, mass);
   inputEl.value = ' ';
 });
 
@@ -28,9 +32,8 @@ const planetWeight = {
 };
 
 function calculateWeight(planet, mass) {
-  let weight = parseInt(mass) * planetWeight[planet];
-
-  console.log(weight);
+  console.log(planet, mass);
+  let weight = (parseInt(mass) * planetWeight[planet]).toFixed(2);
 
   containerEl.innerHTML = ' ';
   const massEl = document.createElement('div');

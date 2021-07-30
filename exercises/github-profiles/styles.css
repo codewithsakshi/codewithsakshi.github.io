@@ -33,7 +33,9 @@ body {
 input {
   max-width: 700px;
   min-width: 300px;
+  width: 80%;
   margin: auto;
+  margin-bottom: 2rem;
   display: block;
   background-color: var(--input-form-bg-color);
   border: none;
@@ -43,6 +45,7 @@ input {
   font-size: 1rem;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
 }
 
 input::placeholder {
@@ -78,8 +81,6 @@ input:focus {
   flex: 1;
 }
 
-
-
 .user-bio {
   padding: 1rem 0 0.8rem 0;
 }
@@ -92,8 +93,6 @@ input:focus {
 }
 
 .user-info ul li {
-  display: flex;
-  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -117,41 +116,9 @@ input:focus {
   background-color: #0F044C;
  }
 
-@media screen and(max-width: 500px) {
-  .card {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .user-form {
-    max-width: 400px;
-  }
-}
 
-.user-form {
-  width: 100%;
-  max-width: 600px;
-}
 
-.user-form input {
-  width: 100%;
-  display: block;
-  background-color: #4c2885;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  font-family: inherit;
-  font-size: 1rem;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(0, 0, 0, 0.1);
-}
 
-.user-form input::placeholder {
-  color: #bbb;
-}
 
-.user-form input:focus {
-  outline: none;
-}
+

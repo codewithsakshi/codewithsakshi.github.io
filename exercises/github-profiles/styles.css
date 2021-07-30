@@ -26,19 +26,19 @@ body {
 
 .user-form {
   width: 100%;
-  /* max-width: 700px; */
+  max-width: 700px;
+  margin: 10px auto;
 }
 
 input {
-  width: 60%;
+  max-width: 700px;
+  min-width: 300px;
   margin: auto;
   display: block;
   background-color: var(--input-form-bg-color);
   border: none;
   border-radius: 10px;
   color: var(--white-color);
-  padding: 1rem 15rem;
-  margin-bottom: 2rem;
   font-family: inherit;
   font-size: 1rem;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
@@ -54,19 +54,20 @@ input:focus {
 }
 
 .card {
-  max-width: 800px;
+  width: 800px;
+  max-width: 100vw;
   background-color: var(--input-form-bg-color);
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(0, 0, 0, 0.1);
   display: flex;
+  flex-wrap: wrap;
   padding: 3rem;
-  margin: 0 1.5rem;
 }
 
 .avatar {
   border-radius: 50%;
-  border: 10px solid var(--body-bg-color);
+  border: 10px solid #001E6C;
   height: 150px;
   width: 150px;
 }
@@ -74,13 +75,12 @@ input:focus {
 .user-info {
   color: #eee;
   margin-left: 2rem;
+  flex: 1;
 }
 
-/* .user-info h2 {
-  margin-top: 0;
-} */
 
-.user-info p {
+
+.user-bio {
   padding: 1rem 0 0.8rem 0;
 }
 
@@ -110,8 +110,12 @@ input:focus {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   display: inline-block;
-  background-color: var(--blue-color);
-}
+  background-color: #001E6C;
+  }
+
+.repo:hover{
+  background-color: #0F044C;
+ }
 
 @media screen and(max-width: 500px) {
   .card {
@@ -126,7 +130,7 @@ input:focus {
 
 .user-form {
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .user-form input {

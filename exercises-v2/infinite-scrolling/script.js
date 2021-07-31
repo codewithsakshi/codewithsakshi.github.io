@@ -39,7 +39,6 @@ async function showPosts() {
 }
 
 function showloading() {
-  console.log('loading...');
   loadingEl.classList.add('show');
 
   setTimeout(() => {
@@ -54,32 +53,28 @@ function showloading() {
 
 function filterPosts(e) {
   const term = e.target.value.toUpperCase();
-  console.log({ term });
-  const posts = document.querySelectorAll('.posts');
+  const posts = document.querySelectorAll('.post');
 
-  for (let i = 0; i < posts.length; i++) {
-    const title = posts.querySelector('.post-title').innerText.toUpperCase();
+  posts.forEach((post) => {
+    const title = post.querySelector('.post-title').innerText.toUpperCase();
     const body = post.querySelector('.post-body').innerText.toUpperCase();
 
     if (title.indexOf(term) > -1 || body.indexOf(term) > -1) {
-      posts.style.display = 'flex';
+      post.style.display = 'flex';
     } else {
-      posts.style.display = 'none';
+      post.style.display = 'none';
     }
-  }
+  });
 }
 
 // Show initial posts
 showPosts();
 
 window.addEventListener('scroll', () => {
-  console.log('Scrolling ....');
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-  console.log({ scrollTop, scrollHeight, clientHeight });
   if (scrollTop + clientHeight >= scrollHeight - 5) {
     showloading();
   }
 });
 
-filter.addEventListener('input', filterPosts);
 inputFilterEl.addEventListener('input', filterPosts);

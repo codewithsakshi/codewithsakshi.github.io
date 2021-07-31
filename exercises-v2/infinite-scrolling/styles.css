@@ -7,7 +7,6 @@
 }
 
 body {
-  background-color: #296ca8;
   font-family: "Roboto", sans-serif;
   color: #fff;
   display: flex;
@@ -16,12 +15,14 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding-bottom: 100px;
-}
+  background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+ }
 
 h1 {
   margin-bottom: 20px;
   margin-top: 20px;
   font-size: 2.3rem;
+  color: #333;
 }
 
 .filter-container {
@@ -39,7 +40,7 @@ h1 {
 
 .post {
   position: relative;
-  background-color: #4992d3;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
   padding: 20px;
@@ -49,9 +50,6 @@ h1 {
   max-width: 800px;
 }
 
-/* .post .post-title {
-  margin-bottom: 20px;
-} */
 
 .post .post-body {
   margin: 15px 0 0;

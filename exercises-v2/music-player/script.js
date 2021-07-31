@@ -4,8 +4,8 @@ const prevBtnElement = document.querySelector('.prev');
 const nextBtnElement = document.querySelector('.next');
 
 const audioSongElement = document.querySelector('.audio');
-// const progressElement = document.querySelector(".progress");
-// const progressContainer = document.querySelector(".progress-container");
+const progressElement = document.querySelector('.progress');
+const progressContainer = document.querySelector('.progress-container');
 const titleElement = document.querySelector('.title');
 const coverImgELement = document.querySelector('.cover');
 const currentTime = document.querySelector('.current-time');
@@ -19,7 +19,6 @@ let songIndex = 2;
 
 playBtnElement.addEventListener('click', () => {
   const isPlaying = playBtnElement.classList.contains('play');
-  // console.log({ isPlaying });
   if (isPlaying) {
     pauseSong();
   } else {
@@ -31,10 +30,19 @@ prevBtnElement.addEventListener('click', prevSong);
 nextBtnElement.addEventListener('click', nextSong);
 audioSongElement.addEventListener('timeupdate', updateProgress);
 audioSongElement.addEventListener('ended', nextSong);
-audioSongElement.addEventListener('timeupdate', durTime);
-progressContainer.addEventListener('click', setProgress);
+// audioSongElement.addEventListener('timeupdate', durTime);
+// progressContainer.addEventListener('click', setProgress);
 
 loadSongs(songs[songIndex]);
+
+// Update progress bar
+function updateProgress(e) {
+  const { duration, currentTime } = e.srcElement;
+  const progressPercent = (currentTime / duration) * 100;
+  progressElement.style.width = `${progressPercent}%`;
+}
+
+// Set progress bar
 
 function loadSongs(song) {
   titleElement.innerHTMl = song;

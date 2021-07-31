@@ -12,19 +12,16 @@ let transactions = [];
 
 try {
   if (localStorage.getItem('transactions')) {
-    // null, undefined, "", [], ---> False
     transactions = JSON.parse(localStorage.getItem('transactions'));
-    console.log({ transactions });
   }
 } catch (error) {
   transactions = [];
 }
 
 function addTransaction(e) {
-  e.preventDefault(); // Why : To Prevent default form submit behaviour
+  e.preventDefault();
 
   if (text.value.trim() === '' || amount.value.trim() === '') {
-    // to remove whitespace
     alert('Please add a text and amount');
   } else {
     const transaction = {
@@ -62,12 +59,12 @@ function addTransactionDOM(transaction) {
   }
 
   const item = document.createElement('li');
-  item.innerHTML = `${transaction.text} <span>${sign}${Math.abs(
-    transaction.amount
-  )}</span> 
+  item.innerHTML = `<small class="text-box">${
+    transaction.text
+  }</small> <span >${sign}${Math.abs(transaction.amount)}</span> 
   <button class="delete-btn" onclick="removeTransaction(${
     transaction.id
-  })">X<button/>`;
+  })"><i class="fas fa-trash"></i><button/>`;
 
   if (transaction.amount < 0) {
     item.classList.add('minus');
@@ -79,33 +76,20 @@ function addTransactionDOM(transaction) {
 }
 
 function updateValues() {
-  // [{id, text, amount},{id, text, amount}]
-  const amounts = transactions.map((transaction) => transaction.amount); // [100, -300, 29]
-  console.log(amounts);
-
-  // const totalMoney = amounts.reduce(
-  //   (acc, amount) => (acc = acc + Number(amount)),
-  //   0
-  // );
+  const amounts = transactions.map((transaction) => transaction.amount);
 
   let totalMoney = 0;
   for (let i = 0; i < amounts.length; i++) {
     totalMoney = totalMoney + Number(amounts[i]);
   }
 
-  console.log(totalMoney);
-
   const income = amounts
     .filter((amount) => amount > 0)
     .reduce((acc, amount) => (acc = acc + Number(amount)), 0);
 
-  console.log({ income: income });
-
   const expense = amounts
     .filter((amount) => amount < 0)
     .reduce((acc, amount) => (acc = acc + Number(amount)), 0);
-
-  console.log({ expense: expense });
 
   balanceEl.innerHTML = `${totalMoney} /-`;
   moneyPlusEl.innerHTML = `${income} /-`;

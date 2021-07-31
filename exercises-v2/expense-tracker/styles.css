@@ -5,28 +5,42 @@
   padding: 0;
   margin: 0;
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
- }
+}
 
 body {
   font-family: "Lato", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
   color: #323232;
+  min-height: 100vh;
+}
+
+.main-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+
+.history-section{
+  flex: 1;
+  max-width: 400px;
+  width: 50%;
+  min-width: 350px;
+  margin: 0 auto;
+}
+
+.history-section h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
 }
 
 .container {
-  margin: 20px auto;
-  width: 380px;
-  max-width: 100%;
-}
-
-.main-heading {
-  font-weight: 800;
-  font-size: 26px;
-  margin-top: 20px;
+  margin: 20px auto 0;
+  min-width: 350px;
+  max-width: 450px;
+  width: 50%;
 }
 
 h4 {
@@ -34,7 +48,6 @@ h4 {
   font-weight: bold;
   font-size: 18px;
 }
-
 
 .inc-exp-container {
   display: flex;
@@ -44,6 +57,7 @@ h4 {
   padding: 20px;
   margin: 25px 0 35px 0;
   box-shadow: var(--box-shadow);
+  border-radius: 3px;
 }
 
 .inc-exp-container div {
@@ -60,6 +74,12 @@ h3 {
   padding-bottom: 10px;
   margin: 20px 0 10px;
   font-weight: 800;
+}
+
+.balance{
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .money {
@@ -79,35 +99,51 @@ h3 {
 .form-control label {
   display: block;
   font-size: 18px;
+  margin-top: 30px;
 }
 
 .form-control input {
   width: 100%;
-  padding: 9px;
+  padding: 15px;
   margin: 10px 0;
-  border-color: 1px solid #dedede;
+  border: 2px solid #FCD8D4;
+  border-color: 1px solid #333;
   font-size: 16px;
+  border-radius: 3px;
 }
+
 
 .btn {
   width: 100%;
-  padding: 10px;
-  background-color: #D83A56;
+  padding: 15px;
+  background: rgb(96, 9, 240);
+  background: linear-gradient(
+    0deg,
+    rgba(96, 9, 240, 1) 0%,
+    rgba(129, 5, 240, 1) 100%
+  );
   border: 0;
+  border-radius: 3px;
   color: #fff;
   font-size: 16px;
-  margin-top: 15px;
+  margin-top: 20px;
   box-shadow: var(--box-shadow);
+  opacity: 0.9;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 1;
+}
+
+.btn:active{
+  transform: scale(0.99)
 }
 
 .list {
   list-style-type: none;
   padding: 0;
   margin-bottom: 40px;
+  margin-top: 30px;
 }
 
 .list li {
@@ -117,8 +153,15 @@ h3 {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 10px 20px;
+  margin: 15px 0;
+  border-radius: 3px;
+  border: 2px solid #F8E2CF;
+}
+
+.text-box{
+ width: 60%;
+ font-size: 16px;
 }
 
 .list li.plus {
@@ -131,15 +174,15 @@ h3 {
 
 .delete-btn {
   cursor: pointer;
-  background-color: #e74c3c;
   border: 0;
-  color: #fff;
+  color: #000;
+  background-color: transparent;
   font-size: 16px;
   line-height: 20px;
   padding: 3px 6px;
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: 20px;
+  right: 0;
   transform: translate(-100%, -50%);
   opacity: 0.8;
   transition: opacity 0.3s ease;

@@ -6,39 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense tracker</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <h2 class="main-heading">Expense Tracker</h2>
-    <div class="container">
-      <h4>Your Balance</h4>
-      <h1 id="balance">$0.00</h1>
-      <div class="inc-exp-container">
-        <div class="income-container">
-          <h4>Income</h4>
-          <p class="money-plus money">0.00Rs</p>
+    <div class="main-container">
+      <div class="container">
+        <h4 class="balance">Your Balance</h4>
+        <h1 id="balance">$0.00</h1>
+        <div class="inc-exp-container">
+          <div class="income-container">
+            <h4>Income</h4>
+            <p class="money-plus money">0.00Rs</p>
+          </div>
+          <div>
+            <h4>Expense</h4>
+            <p class="money-minus money">0.00Rs</p>
+          </div>
         </div>
-        <div>
-          <h4>Expense</h4>
-          <p class="money-minus money">0.00Rs</p>
-        </div>
+        <form id="form">
+          <div class="form-control">
+            <input type="text" id="text" placeholder="Enter text..." />
+          </div>
+          <div class="form-control">
+            <label for="amount"
+              >Amount <br />
+              (negative - expense, positive - income)</label
+            >
+            <input type="number" id="amount" placeholder="Enter amount.." />
+          </div>
+          <button class="btn">Add transaction</button>
+        </form>
       </div>
-      <h3>History</h3>
-      <ul class="list"></ul>
-      <h3>Add new tansaction</h3>
-      <form id="form">
-        <div class="form-control">
-          <label for="text">Text</label>
-          <input type="text" id="text" placeholder="Enter text..." />
-        </div>
-        <div class="form-control">
-          <label for="amount"
-            >Amount <br />
-            (negative - expense, positive - income)</label
-          >
-          <input type="number" id="amount" placeholder="Enter amount.." />
-        </div>
-        <button class="btn">Add transaction</button>
-      </form>
+      <hr />
+      <div class="history-section">
+        <h3>History</h3>
+        <ul class="list"></ul>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>

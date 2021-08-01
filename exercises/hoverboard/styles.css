@@ -21,6 +21,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   max-width: 40%;
+  min-width: 400px;
 }
 
 .square {

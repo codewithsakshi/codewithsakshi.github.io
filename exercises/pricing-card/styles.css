@@ -46,14 +46,13 @@ ul li {
     color: hsl(233, 13%, 49%);
     border-radius: 7px;
     width: 32%;
+    min-width: 350px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
 }
-
-
 
 .professional-plan {
     background-image: linear-gradient(135deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
@@ -74,6 +73,15 @@ ul li {
     border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-btn:active{
+    transform: translate(0.5px);
+}
+
+.card-btn:hover{
+    background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
 }
 
 .card-btn.card-2-btn {
@@ -89,6 +97,7 @@ ul li {
 .list-item-1 {
     padding: 30px;
     border: none;
+    font-size: 20px;
 }
 
 .list-item { 

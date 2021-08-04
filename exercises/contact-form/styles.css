@@ -22,27 +22,30 @@ body {
 
 .container-1 {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  margin-top: 25px;
+  justify-content: center;
+  margin: 25px 10px;
 }
 
 .list-section {
   display: flex;
-  justify-content: space-between;
-  margin-left: 200px;
-}
+  justify-content: space-evenly;
+  }
 
 ul li {
   list-style-type: none;
   margin-left: 15px;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: bold;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--text-color);
+}
+
+.nav-link:hover{
+  color: blue;
 }
 
 button {
@@ -62,16 +65,14 @@ form label {
 
 .sub-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .container-2 {
   padding-top: 40px;
   flex: 1;
   display: flex;
-  justify-content: flex-end;
-  /* margin: auto;
-    margin-top: 80px;
-    margin-left: 160px; */
+  justify-content: center;
   align-items: center;
 }
 

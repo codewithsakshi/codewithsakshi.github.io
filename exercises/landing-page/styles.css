@@ -30,6 +30,11 @@ header .nav-link {
     text-decoration: none;
 }
 
+.nav-link:hover{
+  color: var(--primary-color);
+  border-bottom:  2px solid var(--primary-color);
+} 
+
 .nav-links-container {
     width: 400px;
     display: flex;
@@ -71,6 +76,7 @@ footer ul li {
     text-decoration: none;
 }
 
+
 .product {
     display: flex;
     flex-direction: column; 
@@ -89,8 +95,14 @@ footer ul li {
     padding: 7px 20px;
     font-size: 15px;
     border: none;
+    margin-top: 20px;
     cursor: pointer;
+    border-radius: 2px;
     font-weight: bold;
+}
+
+.btn:hover{
+    background-color: #FF4848;
 }
 
  .get-started-section {
@@ -116,6 +128,9 @@ ul li {
 
 .pricing-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin: 20px;
 }
 ol li {
@@ -123,6 +138,8 @@ ol li {
 }
 .product {
     padding: 5px;
+    min-width: 400px;
+    margin: 20px auto; 
 }
  .footer {
      display: flex;

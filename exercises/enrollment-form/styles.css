@@ -34,11 +34,14 @@ h2 {
    background-color: var(--mute-color);
    width: 60%;
    max-width: 1000px;
+   min-width: 500px;
    margin: auto;
    margin-top: 30px;
    border-radius: 5px;
    display: flex;
-   padding: 50px 30px 50px 50px;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding: 100px;
 }
 
 .sub-container-1 {
@@ -49,6 +52,7 @@ flex: 1;
 }
 .container-2 {
     display: flex;
+    flex-wrap: wrap;
 }
 
 li {
@@ -87,13 +91,12 @@ ul li {
 }
 
 .box-1 {
-    /* margin-top: 30px; */
     flex: 1;
+    width: 200px;
 }
 .box-2 {
-    /* margin-top: 50px;
-    margin-bottom: 30px; */
     flex: 1;
+    width: 200px;
 }
 
 .box-3 {

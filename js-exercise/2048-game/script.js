@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //generate a new number
   function generate() {
-    randomNumber = Math.floor(Math.random() * squares.length);
+    const randomNumber = Math.floor(Math.random() * squares.length);
     if (squares[randomNumber].innerHTML == 0) {
       squares[randomNumber].innerHTML = 2;
       checkForGameOver();
@@ -197,7 +197,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function checkForWin() {
     for (let i = 0; i < squares.length; i++) {
       if (squares[i].innerHTML == 2048) {
-        resultDisplayEl.innerHTML = 'You WIN';
+        resultDisplayEl.innerHTML = 'You Win!';
+        resultDisplayEl.style.color = '#003638';
         document.removeEventListener('keyup', controlKey);
         setTimeout(() => clear(), 3000);
       }
@@ -213,7 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     if (zeros === 0) {
-      resultDisplayEl.innerHTML = 'You LOSE';
+      resultDisplayEl.innerHTML = 'You Lose!';
+      resultDisplayEl.style.color = '#BD1616';
       document.removeEventListener('keyup', controlKey);
       setTimeout(() => clear(), 3000);
     }
